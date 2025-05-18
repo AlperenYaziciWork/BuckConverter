@@ -8,6 +8,17 @@
  */
 static const gpio_pin_cfg_t *m_last_gpio_pin_config_ptr = NULL;
 
+
+/**
+ * @brief Enables the clock for the specified GPIO port.
+ *
+ * This function activates the peripheral clock for the GPIO port used in pin initialization.
+ * If the provided port is not supported, a development error is reported.
+ *
+ * @param[in] gpio_port Pointer to the GPIO port (e.g., GPIOA, GPIOB, etc.).
+ */
+static void enable_used_gpio_pin_clock(GPIO_TypeDef* gpio_port);
+
 /**
  * @brief Initializes the GPIO configuration table.
  *
@@ -38,7 +49,8 @@ void init_gpio_pin(uint8_t pin_no)
 	  return;
   }
 
-  USED_GPIO_PIN_CLOCKS_ENABLE();
+  enable_used_gpio_pin_clock(m_last_gpio_pin_config_ptr[pin_no].Port);
+
   GPIO_InitTypeDef GPIO_InitStruct = {0};
   GPIO_InitStruct.Pin = m_last_gpio_pin_config_ptr[pin_no].Pin;
   GPIO_InitStruct.Mode = m_last_gpio_pin_config_ptr[pin_no].Mode; 
@@ -92,4 +104,37 @@ uint8_t read_gpio_pin(uint8_t pin_no)
 	}
 
     return HAL_GPIO_ReadPin(m_last_gpio_pin_config_ptr[pin_no].Port,m_last_gpio_pin_config_ptr[pin_no].Pin);
+}
+
+/**
+ * @brief Enables the clock for the specified GPIO port.
+ *
+ * This function activates the peripheral clock for the GPIO port used in pin initialization.
+ * If the provided port is not supported, a development error is reported.
+ *
+ * @param[in] gpio_port Pointer to the GPIO port (e.g., GPIOA, GPIOB, etc.).
+ */
+static void enable_used_gpio_pin_clock(GPIO_TypeDef* gpio_port)
+{
+	if(GPIOA == gpio_port)
+	{
+		__HAL_RCC_GPIOA_CLK_ENABLE();
+	}
+	else if(GPIOB == gpio_port)
+	{
+		__HAL_RCC_GPIOB_CLK_ENABLE();
+	}
+	else if(GPIOC == gpio_port)
+	{
+		__HAL_RCC_GPIOC_CLK_ENABLE();
+	}
+	else if(GPIOH == gpio_port)
+	{
+		__HAL_RCC_GPIOH_CLK_ENABLE();
+	}
+	else
+	{
+		report_development_error();
+	}
+
 }

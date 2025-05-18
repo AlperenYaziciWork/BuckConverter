@@ -30,7 +30,6 @@ typedef struct
 	uint32_t 	Speed;
 }gpio_pin_cfg_t;
 
-#define USED_GPIO_PIN_CLOCKS_ENABLE() __HAL_RCC_GPIOC_CLK_ENABLE();  __HAL_RCC_GPIOA_CLK_ENABLE(); // __HAL_RCC_GPIOB_CLK_ENABLE();
 
 /**
  * @brief Initializes the GPIO configuration table.
