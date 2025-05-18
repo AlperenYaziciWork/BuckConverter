@@ -1,6 +1,6 @@
 Project_Configs/bsp_gpio_cfg/bsp_gpio_cfg.o: \
  ../Project_Configs/bsp_gpio_cfg/bsp_gpio_cfg.c \
- /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp_gpio/bsp_gpio.h \
+ /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp/bsp_gpio/bsp_gpio.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -32,7 +32,7 @@ Project_Configs/bsp_gpio_cfg/bsp_gpio_cfg.o: \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
-/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp_gpio/bsp_gpio.h:
+/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp/bsp_gpio/bsp_gpio.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:

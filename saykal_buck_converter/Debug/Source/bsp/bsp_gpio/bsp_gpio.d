@@ -1,5 +1,5 @@
-Source/bsp_gpio/bsp_gpio.o: ../Source/bsp_gpio/bsp_gpio.c \
- ../Source/bsp_gpio/bsp_gpio.h \
+Source/bsp/bsp_gpio/bsp_gpio.o: ../Source/bsp/bsp_gpio/bsp_gpio.c \
+ ../Source/bsp/bsp_gpio/bsp_gpio.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -31,7 +31,7 @@ Source/bsp_gpio/bsp_gpio.o: ../Source/bsp_gpio/bsp_gpio.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
-../Source/bsp_gpio/bsp_gpio.h:
+../Source/bsp/bsp_gpio/bsp_gpio.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:

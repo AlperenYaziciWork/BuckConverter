@@ -26,5 +26,6 @@
 "./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o"
 "./Project_Configs/bsp_gpio_cfg/bsp_gpio_cfg.o"
 "./Project_Configs/bsp_pwm_config/bsp_pwm_cfg.o"
-"./Source/bsp_gpio/bsp_gpio.o"
-"./Source/bsp_pwm/bsp_pwm.o"
+"./Source/bsp/bsp_adc/bsp_adc.o"
+"./Source/bsp/bsp_gpio/bsp_gpio.o"
+"./Source/bsp/bsp_pwm/bsp_pwm.o"

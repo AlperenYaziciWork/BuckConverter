@@ -1,0 +1,7 @@
+../Source/bsp/bsp_adc/bsp_adc.c:40:6:init_bsp_adc	16	static
+../Source/bsp/bsp_adc/bsp_adc.c:73:18:read_current_sense_adc_value	24	static
+../Source/bsp/bsp_adc/bsp_adc.c:99:18:read_voltage_sense_adc_value	24	static
+../Source/bsp/bsp_adc/bsp_adc.c:125:18:read_temperature_sense_adc_value	24	static
+../Source/bsp/bsp_adc/bsp_adc.c:148:13:configure_current_sense_adc_channel	24	static
+../Source/bsp/bsp_adc/bsp_adc.c:166:13:configure_voltage_sense_adc_channel	24	static
+../Source/bsp/bsp_adc/bsp_adc.c:184:13:configure_temperature_sense_adc_channel	24	static
