@@ -118,7 +118,7 @@ void init_bsp_pwm(bsp_pwm_config_t *bsp_pwm_configs_ptr)
 	    report_init_error();
 	  }
 
-	  init_bsp_gpio_pin(bsp_pwm_configs_ptr[pwm_timer_idx].pwm_out_gpio_pin_id_in_bsp_gpio);
+	  init_gpio_pin(bsp_pwm_configs_ptr[pwm_timer_idx].pwm_out_gpio_pin_id_in_bsp_gpio);
 	}
 }
 

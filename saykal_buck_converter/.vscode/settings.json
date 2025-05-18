@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "stdint.h": "c",
-        "bsp_pwm_cfg.h": "c"
+        "bsp_pwm_cfg.h": "c",
+        "bsp_gpio.h": "c",
+        "stm32f4xx_hal_gpio.h": "c"
     }
 }
