@@ -3400,7 +3400,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x8ed ./Source/bsp_gpio/bsp_gpio.o
  .debug_macro   0x00000000       0x4d ./Source/bsp_gpio/bsp_gpio.o
  .debug_macro   0x00000000      0x12d ./Source/bsp_gpio/bsp_gpio.o
- .debug_line    0x00000000      0x81b ./Source/bsp_gpio/bsp_gpio.o
+ .debug_line    0x00000000      0x81c ./Source/bsp_gpio/bsp_gpio.o
  .debug_str     0x00000000    0xd0a07 ./Source/bsp_gpio/bsp_gpio.o
  .comment       0x00000000       0x44 ./Source/bsp_gpio/bsp_gpio.o
  .debug_frame   0x00000000       0xc8 ./Source/bsp_gpio/bsp_gpio.o

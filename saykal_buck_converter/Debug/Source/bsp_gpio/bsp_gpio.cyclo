@@ -1,5 +1,5 @@
-../Source/bsp_gpio/bsp_gpio.c:21:6:init_bsp_gpio	2
-../Source/bsp_gpio/bsp_gpio.c:36:6:init_gpio_pin	2
-../Source/bsp_gpio/bsp_gpio.c:61:6:write_gpio_pin	3
-../Source/bsp_gpio/bsp_gpio.c:90:9:read_gpio_pin	2
-../Source/bsp_gpio/bsp_gpio.c:101:13:enable_used_gpio_pin_clock	5
+../Source/bsp_gpio/bsp_gpio.c:29:6:init_bsp_gpio	2
+../Source/bsp_gpio/bsp_gpio.c:44:6:init_gpio_pin	2
+../Source/bsp_gpio/bsp_gpio.c:69:6:write_gpio_pin	3
+../Source/bsp_gpio/bsp_gpio.c:98:9:read_gpio_pin	2
+../Source/bsp_gpio/bsp_gpio.c:117:13:enable_used_gpio_pin_clock	5
