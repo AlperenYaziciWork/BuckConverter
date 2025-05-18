@@ -25,4 +25,8 @@ SUBDIRS := \
 Core/Src \
 Core/Startup \
 Drivers/STM32F4xx_HAL_Driver/Src \
+Project_Configs/bsp_gpio_cfg \
+Project_Configs/bsp_pwm_config \
+Source/bsp_gpio \
+Source/bsp_pwm \
 
