@@ -1,0 +1,6 @@
+../Source/device_drivers/software_timer/software_timer.c:29:6:init_software_timer_module	16	static
+../Source/device_drivers/software_timer/software_timer.c:39:6:start_software_timer	24	static
+../Source/device_drivers/software_timer/software_timer.c:49:6:stop_software_timer	16	static
+../Source/device_drivers/software_timer/software_timer.c:54:6:run_all_software_timers	16	static
+../Source/device_drivers/software_timer/software_timer.c:65:15:check_status_of_software_timer	16	static
+../Source/device_drivers/software_timer/software_timer.c:70:13:timer_timeout_process	32	static

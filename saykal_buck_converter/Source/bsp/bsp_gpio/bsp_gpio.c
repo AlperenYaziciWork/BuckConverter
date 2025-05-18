@@ -8,7 +8,7 @@
  * This global variable holds the address of the GPIO configuration table passed to 
  * init_bsp_gpio(). It is used by other GPIO-related functions to access configuration data.
  */
-static const gpio_pin_cfg_t *m_last_gpio_pin_config_ptr = NULL;
+static gpio_pin_cfg_t *m_last_gpio_pin_config_ptr = NULL;
 
 
 /**
@@ -32,7 +32,7 @@ void init_bsp_gpio(const gpio_pin_cfg_t *gpio_pin_configs_ptr)
 {
     if(NULL != gpio_pin_configs_ptr)
     {
-        m_last_gpio_pin_config_ptr = gpio_pin_configs_ptr;
+        m_last_gpio_pin_config_ptr = (gpio_pin_cfg_t *)gpio_pin_configs_ptr;
     }
 }
 
