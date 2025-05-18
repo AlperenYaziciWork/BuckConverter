@@ -1,7 +1,5 @@
-Project_Configs/ACS724_CS_cfg/ACS724_CS_cfg.o: \
- ../Project_Configs/ACS724_CS_cfg/ACS724_CS_cfg.c \
- /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/device_drivers/ACS724_current_sensor/ACS724_CS.h \
- /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp/bsp_adc/bsp_adc.h \
+Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o: \
+ ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -33,8 +31,6 @@ Project_Configs/ACS724_CS_cfg/ACS724_CS_cfg.o: \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
-/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/device_drivers/ACS724_current_sensor/ACS724_CS.h:
-/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp/bsp_adc/bsp_adc.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:
