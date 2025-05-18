@@ -73,7 +73,7 @@ void write_gpio_pin(uint8_t pin_no , uint8_t pin_status)
 	if(NULL == m_last_gpio_pin_config_ptr)
 	{
 	  report_development_error();
-	  return ERROR_STATE_ABNORMAL_RETUN_VALUE;
+	  return;
 	}
 
 	if(GPIO_MODE_AF_PP != m_last_gpio_pin_config_ptr[pin_no].Mode)
@@ -102,7 +102,7 @@ uint8_t read_gpio_pin(uint8_t pin_no)
 	if(NULL == m_last_gpio_pin_config_ptr)
 	{
 	  report_development_error();
-	  return 0xFF; // return abnormal value
+	  return ERROR_STATE_ABNORMAL_RETUN_VALUE; // return abnormal value
 	}
 
     return HAL_GPIO_ReadPin(m_last_gpio_pin_config_ptr[pin_no].Port,m_last_gpio_pin_config_ptr[pin_no].Pin);
