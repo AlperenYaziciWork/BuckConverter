@@ -1,7 +1,7 @@
 
 #include "pid_controller.h"
 
-float PID_Step(pid_config_t *pid_parameters_ptr, float sensed_value, float reference_point)
+float PID_Step(pid_controller_t *pid_parameters_ptr, float sensed_value, float reference_point)
 {
 
     float calculated_error;

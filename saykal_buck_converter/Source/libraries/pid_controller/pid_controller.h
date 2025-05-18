@@ -22,9 +22,9 @@ typedef struct
     float command_sat_prev;// Previous saturated controller_output
     float command_prev;    // Previous controller_output
 
-}pid_config_t;
+}pid_controller_t;
 
 
-float PID_Step(pid_config_t *pid_parameters_ptr, float sensed_value, float reference_point);
+float PID_Step(pid_controller_t *pid_parameters_ptr, float sensed_value, float reference_point);
 
 #endif /* PID_CONTROLLER_PID_CONTROLLER_H_ */
