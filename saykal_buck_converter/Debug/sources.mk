@@ -28,9 +28,11 @@ Drivers/STM32F4xx_HAL_Driver/Src \
 Project_Configs/adc_sensor_driver_cfg \
 Project_Configs/bsp_gpio_cfg \
 Project_Configs/bsp_pwm_config \
+Project_Configs/software_timer_cfg \
 Source/bsp/bsp_adc \
 Source/bsp/bsp_gpio \
 Source/bsp/bsp_pwm \
 Source/device_drivers/adc_sensor_driver \
+Source/device_drivers/software_timer \
 Source/libraries/pid_controller \
 

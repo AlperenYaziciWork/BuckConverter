@@ -10,10 +10,12 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include Source/libraries/pid_controller/subdir.mk
+-include Source/device_drivers/software_timer/subdir.mk
 -include Source/device_drivers/adc_sensor_driver/subdir.mk
 -include Source/bsp/bsp_pwm/subdir.mk
 -include Source/bsp/bsp_gpio/subdir.mk
 -include Source/bsp/bsp_adc/subdir.mk
+-include Project_Configs/software_timer_cfg/subdir.mk
 -include Project_Configs/bsp_pwm_config/subdir.mk
 -include Project_Configs/bsp_gpio_cfg/subdir.mk
 -include Project_Configs/adc_sensor_driver_cfg/subdir.mk
