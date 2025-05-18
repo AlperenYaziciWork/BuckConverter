@@ -32,4 +32,5 @@ Source/bsp/bsp_adc \
 Source/bsp/bsp_gpio \
 Source/bsp/bsp_pwm \
 Source/device_drivers/adc_sensor_driver \
+Source/libraries/pid_controller \
 
