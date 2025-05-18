@@ -14,6 +14,7 @@ RM := rm -rf
 -include Source/bsp/bsp_adc/subdir.mk
 -include Project_Configs/bsp_pwm_config/subdir.mk
 -include Project_Configs/bsp_gpio_cfg/subdir.mk
+-include Project_Configs/ACS724_CS_cfg/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk

@@ -24,6 +24,7 @@
 "./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
 "./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
 "./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.o"
+"./Project_Configs/ACS724_CS_cfg/ACS724_CS_cfg.o"
 "./Project_Configs/bsp_gpio_cfg/bsp_gpio_cfg.o"
 "./Project_Configs/bsp_pwm_config/bsp_pwm_cfg.o"
 "./Source/bsp/bsp_adc/bsp_adc.o"
