@@ -10,8 +10,22 @@
 #include "adc_sensor_driver.h"
 #include "bsp_pwm.h"
 
+/**
+ * @brief Pointer to the active buck converter configuration.
+ */
 static buck_converter_cfg_t *m_buck_converter_cfg = NULL;
 
+/**
+ * @brief Initializes the buck converter application with the given configuration.
+ *
+ * This function sets the buck converter configuration, starts the corresponding PWM channel for the MOSFET,
+ * and starts a software timer to periodically execute the control loop.
+ *
+ * @param[in] buck_converter_cfg_ptr Pointer to the configuration structure of the buck converter.
+ *                                   Must not be NULL.
+ *
+ * @retval None
+ */
 void init_buck_converter(const buck_converter_cfg_t *buck_converter_cfg_ptr)
 {
 	if(NULL != buck_converter_cfg_ptr)
@@ -27,11 +41,26 @@ void init_buck_converter(const buck_converter_cfg_t *buck_converter_cfg_ptr)
 	}
 }
 
+/**
+ * @brief Performs cascaded PID control for output voltage with current limiting.
+ *
+ * This function implements a cascaded control loop where the output voltage is regulated
+ * using an outer PID loop that generates a current reference. This reference is then used
+ * by an inner PID loop to control the output current. The result is translated into a PWM duty cycle
+ * to drive the buck converter MOSFET.
+ *
+ * It reads both output voltage and output current via the ADC sensor driver.
+ *
+ * It is called by software timer (BUCK_CONVERTER_PID_SOFTWARE_TIMER_ID) periodically.
+ *
+ * @retval None
+ */
 void control_out_voltage_with_current_limit(void)
 {
 	float sensed_output_voltage = 0.0f;
 
-	read_adc_sensor_value(BUCK_CONVERTOR_OUT_VOLTAGE_RESISTOR_SENSOR_ID , &sensed_output_voltage);
+	adc_sensor_state_e adc_read_state =
+		read_adc_sensor_value(BUCK_CONVERTOR_OUT_VOLTAGE_RESISTOR_SENSOR_ID , &sensed_output_voltage);
 
 	float i_out_reference = PID_Step(m_buck_converter_cfg->pid_out_voltage_cotroller_ptr,
 									 sensed_output_voltage,
@@ -39,7 +68,10 @@ void control_out_voltage_with_current_limit(void)
 
 	float sensed_output_current = 0.0f;
 
-	read_adc_sensor_value(BUCK_CONVERTOR_OUT_CURRENT_ACS724_SENSOR_ID , &sensed_output_current);
+	adc_read_state =
+			read_adc_sensor_value(BUCK_CONVERTOR_OUT_CURRENT_ACS724_SENSOR_ID , &sensed_output_current);
+
+	//TODO : current monitor to detect over current
 
 	float duty_reference = PID_Step(m_buck_converter_cfg->pid_out_current_cotroller_ptr,
 									sensed_output_current,
