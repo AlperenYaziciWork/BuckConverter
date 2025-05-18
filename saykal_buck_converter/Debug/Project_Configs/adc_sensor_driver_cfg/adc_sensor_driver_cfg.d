@@ -33,6 +33,7 @@ Project_Configs/adc_sensor_driver_cfg/adc_sensor_driver_cfg.o: \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
+ /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs/adc_sensor_driver_cfg/adc_sensor_driver_cfg.h \
  ../Project_Configs/adc_sensor_driver_cfg/adc_sensor_driver_cfg.h
 /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/device_drivers/adc_sensor_driver/adc_sensor_driver.h:
 /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp/bsp_adc/bsp_adc.h:
@@ -67,4 +68,5 @@ Project_Configs/adc_sensor_driver_cfg/adc_sensor_driver_cfg.o: \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
+/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs/adc_sensor_driver_cfg/adc_sensor_driver_cfg.h:
 ../Project_Configs/adc_sensor_driver_cfg/adc_sensor_driver_cfg.h:

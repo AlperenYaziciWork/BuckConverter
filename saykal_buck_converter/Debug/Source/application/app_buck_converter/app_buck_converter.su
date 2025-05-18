@@ -1,0 +1,2 @@
+../Source/application/app_buck_converter/app_buck_converter.c:15:6:init_buck_converter	16	static
+../Source/application/app_buck_converter/app_buck_converter.c:30:6:control_out_voltage_with_current_limit	24	static
