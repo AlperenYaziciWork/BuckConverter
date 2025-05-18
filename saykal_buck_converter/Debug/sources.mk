@@ -25,8 +25,11 @@ SUBDIRS := \
 Core/Src \
 Core/Startup \
 Drivers/STM32F4xx_HAL_Driver/Src \
+Project_Configs/adc_sensor_driver_cfg \
 Project_Configs/bsp_gpio_cfg \
 Project_Configs/bsp_pwm_config \
-Source/bsp_gpio \
-Source/bsp_pwm \
+Source/bsp/bsp_adc \
+Source/bsp/bsp_gpio \
+Source/bsp/bsp_pwm \
+Source/device_drivers/adc_sensor_driver \
 

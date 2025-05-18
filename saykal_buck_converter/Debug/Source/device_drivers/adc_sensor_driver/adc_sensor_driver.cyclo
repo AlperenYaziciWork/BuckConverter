@@ -1,0 +1,2 @@
+../Source/device_drivers/adc_sensor_driver/adc_sensor_driver.c:7:6:init_adc_sensor_driver	2
+../Source/device_drivers/adc_sensor_driver/adc_sensor_driver.c:18:6:read_adc_sensor_value	2

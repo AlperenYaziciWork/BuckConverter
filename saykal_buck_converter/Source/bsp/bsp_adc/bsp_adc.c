@@ -1,6 +1,8 @@
 
 #include "bsp_adc.h"
 
+#define RAW_TO_VOLTAGE_FACTOR	3.3f/4095
+
 /** @brief Rank definitions for ADC channels. */
 #define ADC_CHANNEL_FIRST_RANK 1U
 #define ADC_CHANNEL_SECOND_RANK 2U
@@ -66,11 +68,11 @@ void init_bsp_adc()
 /**
  * @brief Reads the ADC value from the current sense channel.
  *
- * @param[out] raw_value Pointer to store the raw ADC value.
+ * @param[out] raw_value Pointer to store the ADC voltage value.
  * @retval BSP_ADC_STATE_OK if the conversion is successful.
  * @retval BSP_ADC_STATE_ERROR if the conversion fails.
  */
-bsp_adc_status_e read_current_sense_adc_value(uint16_t *raw_value)
+bsp_adc_status_e read_current_sense_adc_value(float *voltage_value_ptr)
 {
     bsp_adc_status_e read_status = BSP_ADC_STATE_ERROR;
     configure_current_sense_adc_channel();
@@ -80,7 +82,7 @@ bsp_adc_status_e read_current_sense_adc_value(uint16_t *raw_value)
 
     if(HAL_OK == poll_state)
     {
-    	*raw_value = HAL_ADC_GetValue(&m_hadc1);
+    	*voltage_value_ptr = RAW_TO_VOLTAGE_FACTOR * HAL_ADC_GetValue(&m_hadc1);
         read_status = BSP_ADC_STATE_OK;
     }
 
@@ -92,11 +94,11 @@ bsp_adc_status_e read_current_sense_adc_value(uint16_t *raw_value)
 /**
  * @brief Reads the ADC value from the voltage sense channel.
  *
- * @param[out] raw_value Pointer to store the raw ADC value.
+ * @param[out] voltage_value_ptr Pointer to store the ADC voltage value.
  * @retval BSP_ADC_STATE_OK if the conversion is successful.
  * @retval BSP_ADC_STATE_ERROR if the conversion fails.
  */
-bsp_adc_status_e read_voltage_sense_adc_value(uint16_t *raw_value)
+bsp_adc_status_e read_voltage_sense_adc_value(float *voltage_value_ptr)
 {
     bsp_adc_status_e read_status = BSP_ADC_STATE_ERROR;
     configure_voltage_sense_adc_channel();
@@ -106,7 +108,7 @@ bsp_adc_status_e read_voltage_sense_adc_value(uint16_t *raw_value)
 
     if(HAL_OK == poll_state)
     {
-    	*raw_value = HAL_ADC_GetValue(&m_hadc1);
+    	*voltage_value_ptr = RAW_TO_VOLTAGE_FACTOR * HAL_ADC_GetValue(&m_hadc1);
         read_status = BSP_ADC_STATE_OK;
     }
 
@@ -118,11 +120,11 @@ bsp_adc_status_e read_voltage_sense_adc_value(uint16_t *raw_value)
 /**
  * @brief Reads the ADC value from the temperature sense channel.
  *
- * @param[out] raw_value Pointer to store the raw ADC value.
+ * @param[out] voltage_value_ptr Pointer to store the ADC voltage value.
  * @retval BSP_ADC_STATE_OK if the conversion is successful.
  * @retval BSP_ADC_STATE_ERROR if the conversion fails.
  */
-bsp_adc_status_e read_temperature_sense_adc_value(uint16_t *raw_value)
+bsp_adc_status_e read_temperature_sense_adc_value(float *voltage_value_ptr)
 {
     bsp_adc_status_e read_status = BSP_ADC_STATE_ERROR;
     configure_temperature_sense_adc_channel();
@@ -132,7 +134,7 @@ bsp_adc_status_e read_temperature_sense_adc_value(uint16_t *raw_value)
 
     if(HAL_OK == poll_state)
     {
-    	*raw_value = HAL_ADC_GetValue(&m_hadc1);
+    	*voltage_value_ptr = RAW_TO_VOLTAGE_FACTOR * HAL_ADC_GetValue(&m_hadc1);
         read_status = BSP_ADC_STATE_OK;
     }
 

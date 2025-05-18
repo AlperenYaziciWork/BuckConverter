@@ -11,6 +11,7 @@
 #include <stdint.h>
 #include "stm32f4xx_hal.h"
 
+
 typedef enum{
     BSP_ADC_STATE_OK,
     BSP_ADC_STATE_ERROR,
@@ -31,28 +32,28 @@ void init_bsp_adc();
 /**
  * @brief Reads the ADC value from the current sense channel.
  *
- * @param[out] raw_value Pointer to store the raw ADC value.
+ * @param[out] voltage_value_ptr Pointer to store the ADC voltage value.
  * @retval BSP_ADC_STATE_OK if the conversion is successful.
  * @retval BSP_ADC_STATE_ERROR if the conversion fails.
  */
-bsp_adc_status_e read_current_sense_adc_value(uint16_t *raw_value);
+bsp_adc_status_e read_current_sense_adc_value(float *voltage_value_ptr);
 
 /**
  * @brief Reads the ADC value from the voltage sense channel.
  *
- * @param[out] raw_value Pointer to store the raw ADC value.
+ * @param[out] voltage_value_ptr Pointer to store the ADC voltage value.
  * @retval BSP_ADC_STATE_OK if the conversion is successful.
  * @retval BSP_ADC_STATE_ERROR if the conversion fails.
  */
-bsp_adc_status_e read_voltage_sense_adc_value(uint16_t *raw_value);
+bsp_adc_status_e read_voltage_sense_adc_value(float *voltage_value_ptr);
 
 /**
  * @brief Reads the ADC value from the temperature sense channel.
  *
- * @param[out] raw_value Pointer to store the raw ADC value.
+ * @param[out] voltage_value_ptr Pointer to store the ADC voltage value.
  * @retval BSP_ADC_STATE_OK if the conversion is successful.
  * @retval BSP_ADC_STATE_ERROR if the conversion fails.
  */
-bsp_adc_status_e read_temperature_sense_adc_value(uint16_t *raw_value);
+bsp_adc_status_e read_temperature_sense_adc_value(float *voltage_value_ptr);
 
 #endif /* BSP_ADC_H_ */

@@ -1,6 +1,5 @@
-Source/bsp_pwm/bsp_pwm.o: ../Source/bsp_pwm/bsp_pwm.c \
- ../Source/bsp_pwm/bsp_pwm.h \
- /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs/bsp_pwm_config/bsp_pwm_cfg.h \
+Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o: \
+ ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -31,10 +30,7 @@ Source/bsp_pwm/bsp_pwm.o: ../Source/bsp_pwm/bsp_pwm.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
- ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
- /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp_gpio/bsp_gpio.h
-../Source/bsp_pwm/bsp_pwm.h:
-/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs/bsp_pwm_config/bsp_pwm_cfg.h:
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:
@@ -66,4 +62,3 @@ Source/bsp_pwm/bsp_pwm.o: ../Source/bsp_pwm/bsp_pwm.c \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
-/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp_gpio/bsp_gpio.h:

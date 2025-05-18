@@ -1,6 +1,6 @@
 Project_Configs/bsp_pwm_config/bsp_pwm_cfg.o: \
  ../Project_Configs/bsp_pwm_config/bsp_pwm_cfg.c \
- /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp_pwm/bsp_pwm.h \
+ /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp/bsp_pwm/bsp_pwm.h \
  /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs/bsp_pwm_config/bsp_pwm_cfg.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
@@ -34,7 +34,7 @@ Project_Configs/bsp_pwm_config/bsp_pwm_cfg.o: \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs/bsp_gpio_cfg/bsp_gpio_cfg.h
-/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp_pwm/bsp_pwm.h:
+/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp/bsp_pwm/bsp_pwm.h:
 /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs/bsp_pwm_config/bsp_pwm_cfg.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:

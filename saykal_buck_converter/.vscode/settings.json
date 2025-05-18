@@ -3,6 +3,8 @@
         "stdint.h": "c",
         "bsp_pwm_cfg.h": "c",
         "bsp_gpio.h": "c",
-        "stm32f4xx_hal_gpio.h": "c"
+        "stm32f4xx_hal_gpio.h": "c",
+        "adc_sensor_driver_cfg.h": "c",
+        "adc_sensor_driver.h": "c"
     }
 }

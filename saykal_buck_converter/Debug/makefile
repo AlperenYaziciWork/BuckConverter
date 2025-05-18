@@ -9,10 +9,13 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include Source/bsp_pwm/subdir.mk
--include Source/bsp_gpio/subdir.mk
+-include Source/device_drivers/adc_sensor_driver/subdir.mk
+-include Source/bsp/bsp_pwm/subdir.mk
+-include Source/bsp/bsp_gpio/subdir.mk
+-include Source/bsp/bsp_adc/subdir.mk
 -include Project_Configs/bsp_pwm_config/subdir.mk
 -include Project_Configs/bsp_gpio_cfg/subdir.mk
+-include Project_Configs/adc_sensor_driver_cfg/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
