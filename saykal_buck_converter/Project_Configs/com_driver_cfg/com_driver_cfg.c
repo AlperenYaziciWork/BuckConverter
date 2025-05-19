@@ -55,7 +55,7 @@ const com_signal_t m_com_signals_of_current_info_message[] =
 
 	},
 	{
-		.signal_id = COM_BUCK_INPUT_CIURRENT_SIGNAL_ID,
+		.signal_id = COM_BUCK_INPUT_CURRENT_SIGNAL_ID,
 		.signal_base_info =
 		{
 			.com_bit_position = 32U,
