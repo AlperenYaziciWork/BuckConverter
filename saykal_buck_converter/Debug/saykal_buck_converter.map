@@ -3194,6 +3194,7 @@ Discarded input sections
  .group         0x00000000        0xc ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
  .group         0x00000000        0xc ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
  .group         0x00000000        0xc ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
+ .group         0x00000000        0xc ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
  .text          0x00000000        0x0 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
  .data          0x00000000        0x0 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
  .bss           0x00000000        0x0 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
@@ -3202,12 +3203,12 @@ Discarded input sections
  .data.m_pid_current_controller
                 0x00000000       0x2c ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
  .rodata.g_buck_converter_config
-                0x00000000       0x14 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
- .debug_info    0x00000000      0x1b4 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
+                0x00000000       0x18 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
+ .debug_info    0x00000000      0x1d9 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
  .debug_abbrev  0x00000000       0xa1 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
  .debug_aranges
                 0x00000000       0x18 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
- .debug_macro   0x00000000       0x77 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
+ .debug_macro   0x00000000       0x8a ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
  .debug_macro   0x00000000      0xad8 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
  .debug_macro   0x00000000       0x22 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
  .debug_macro   0x00000000       0x8e ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
@@ -3215,8 +3216,9 @@ Discarded input sections
  .debug_macro   0x00000000      0x103 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
  .debug_macro   0x00000000       0x6a ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
  .debug_macro   0x00000000      0x1df ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
- .debug_line    0x00000000      0x4bd ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
- .debug_str     0x00000000     0x3f72 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
+ .debug_macro   0x00000000       0x1c ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
+ .debug_line    0x00000000      0x5c5 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
+ .debug_str     0x00000000     0x4061 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
  .comment       0x00000000       0x44 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
  .ARM.attributes
                 0x00000000       0x34 ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
@@ -3428,6 +3430,53 @@ Discarded input sections
  .comment       0x00000000       0x44 ./Project_Configs/bsp_pwm_config/bsp_pwm_cfg.o
  .ARM.attributes
                 0x00000000       0x34 ./Project_Configs/bsp_pwm_config/bsp_pwm_cfg.o
+ .group         0x00000000        0xc ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .group         0x00000000        0xc ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .group         0x00000000        0xc ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .group         0x00000000        0xc ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .group         0x00000000        0xc ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .group         0x00000000        0xc ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .group         0x00000000        0xc ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .group         0x00000000        0xc ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .group         0x00000000        0xc ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .group         0x00000000        0xc ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .text          0x00000000        0x0 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .data          0x00000000        0x0 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .bss           0x00000000        0x0 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .rodata.m_com_periodic_voltage_current_system_info_message
+                0x00000000        0x4 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .rodata.m_com_signals_of_voltage_info_message
+                0x00000000       0x18 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .rodata.m_com_signals_of_current_info_message
+                0x00000000       0x18 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .rodata.m_com_signals_of_system_info_message
+                0x00000000       0x18 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .rodata.m_com_messages
+                0x00000000       0x3c ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .rodata.g_com_message_configs
+                0x00000000        0x4 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .debug_info    0x00000000      0x354 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .debug_abbrev  0x00000000       0xb0 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .debug_aranges
+                0x00000000       0x18 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .debug_macro   0x00000000       0x92 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .debug_macro   0x00000000      0xad8 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .debug_macro   0x00000000       0x22 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .debug_macro   0x00000000       0x8e ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .debug_macro   0x00000000       0x51 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .debug_macro   0x00000000      0x103 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .debug_macro   0x00000000       0x6a ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .debug_macro   0x00000000      0x1df ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .debug_macro   0x00000000       0x22 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .debug_macro   0x00000000       0x1c ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .debug_macro   0x00000000       0x4c ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .debug_line    0x00000000      0x5be ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .debug_str     0x00000000     0x4511 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .comment       0x00000000       0x44 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .ARM.attributes
+                0x00000000       0x34 ./Project_Configs/com_driver_cfg/com_driver_cfg.o
+ .group         0x00000000        0xc ./Project_Configs/software_timer_cfg/software_timer_cfg.o
+ .group         0x00000000        0xc ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .group         0x00000000        0xc ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .group         0x00000000        0xc ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .group         0x00000000        0xc ./Project_Configs/software_timer_cfg/software_timer_cfg.o
@@ -3476,14 +3525,14 @@ Discarded input sections
  .data          0x00000000        0x0 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .bss           0x00000000        0x0 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .rodata.software_timers_configs
-                0x00000000        0x8 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
+                0x00000000       0x10 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .rodata.g_software_timer_general_config
                 0x00000000        0x8 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
- .debug_info    0x00000000      0x194 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
- .debug_abbrev  0x00000000       0xe6 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
+ .debug_info    0x00000000      0x1da ./Project_Configs/software_timer_cfg/software_timer_cfg.o
+ .debug_abbrev  0x00000000      0x104 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .debug_aranges
                 0x00000000       0x18 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
- .debug_macro   0x00000000      0x21d ./Project_Configs/software_timer_cfg/software_timer_cfg.o
+ .debug_macro   0x00000000      0x239 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .debug_macro   0x00000000      0xad8 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .debug_macro   0x00000000       0x22 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .debug_macro   0x00000000       0x8e ./Project_Configs/software_timer_cfg/software_timer_cfg.o
@@ -3491,7 +3540,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x103 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .debug_macro   0x00000000       0x6a ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .debug_macro   0x00000000      0x1df ./Project_Configs/software_timer_cfg/software_timer_cfg.o
- .debug_macro   0x00000000       0x16 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
+ .debug_macro   0x00000000       0x1c ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .debug_macro   0x00000000      0x2a1 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .debug_macro   0x00000000       0x2e ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .debug_macro   0x00000000       0x2f ./Project_Configs/software_timer_cfg/software_timer_cfg.o
@@ -3528,11 +3577,15 @@ Discarded input sections
  .debug_macro   0x00000000      0x8ed ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .debug_macro   0x00000000       0x4d ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .debug_macro   0x00000000      0x12d ./Project_Configs/software_timer_cfg/software_timer_cfg.o
- .debug_line    0x00000000      0x928 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
- .debug_str     0x00000000    0xd0994 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
+ .debug_macro   0x00000000       0x22 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
+ .debug_macro   0x00000000       0x4c ./Project_Configs/software_timer_cfg/software_timer_cfg.o
+ .debug_line    0x00000000      0xa37 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
+ .debug_str     0x00000000    0xd0bf1 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .comment       0x00000000       0x44 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
  .ARM.attributes
                 0x00000000       0x34 ./Project_Configs/software_timer_cfg/software_timer_cfg.o
+ .group         0x00000000        0xc ./Source/application/app_buck_converter/app_buck_converter.o
+ .group         0x00000000        0xc ./Source/application/app_buck_converter/app_buck_converter.o
  .group         0x00000000        0xc ./Source/application/app_buck_converter/app_buck_converter.o
  .group         0x00000000        0xc ./Source/application/app_buck_converter/app_buck_converter.o
  .group         0x00000000        0xc ./Source/application/app_buck_converter/app_buck_converter.o
@@ -3584,17 +3637,23 @@ Discarded input sections
  .bss           0x00000000        0x0 ./Source/application/app_buck_converter/app_buck_converter.o
  .bss.m_buck_converter_cfg
                 0x00000000        0x4 ./Source/application/app_buck_converter/app_buck_converter.o
+ .bss.is_cricial_error_detected
+                0x00000000        0x1 ./Source/application/app_buck_converter/app_buck_converter.o
  .text.init_buck_converter
-                0x00000000       0x3c ./Source/application/app_buck_converter/app_buck_converter.o
+                0x00000000       0x44 ./Source/application/app_buck_converter/app_buck_converter.o
  .text.control_out_voltage_with_current_limit
-                0x00000000       0x7c ./Source/application/app_buck_converter/app_buck_converter.o
- .debug_info    0x00000000      0x2ee ./Source/application/app_buck_converter/app_buck_converter.o
- .debug_abbrev  0x00000000      0x12a ./Source/application/app_buck_converter/app_buck_converter.o
+                0x00000000      0x114 ./Source/application/app_buck_converter/app_buck_converter.o
+ .text.monitor_current_to_detect_over_current
+                0x00000000       0x5c ./Source/application/app_buck_converter/app_buck_converter.o
+ .bss.over_curent_detect_cnt.0
+                0x00000000        0x2 ./Source/application/app_buck_converter/app_buck_converter.o
+ .debug_info    0x00000000      0x484 ./Source/application/app_buck_converter/app_buck_converter.o
+ .debug_abbrev  0x00000000      0x178 ./Source/application/app_buck_converter/app_buck_converter.o
  .debug_aranges
-                0x00000000       0x28 ./Source/application/app_buck_converter/app_buck_converter.o
+                0x00000000       0x30 ./Source/application/app_buck_converter/app_buck_converter.o
  .debug_rnglists
-                0x00000000       0x19 ./Source/application/app_buck_converter/app_buck_converter.o
- .debug_macro   0x00000000      0x24d ./Source/application/app_buck_converter/app_buck_converter.o
+                0x00000000       0x20 ./Source/application/app_buck_converter/app_buck_converter.o
+ .debug_macro   0x00000000      0x269 ./Source/application/app_buck_converter/app_buck_converter.o
  .debug_macro   0x00000000      0xad8 ./Source/application/app_buck_converter/app_buck_converter.o
  .debug_macro   0x00000000       0x22 ./Source/application/app_buck_converter/app_buck_converter.o
  .debug_macro   0x00000000       0x8e ./Source/application/app_buck_converter/app_buck_converter.o
@@ -3602,7 +3661,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x103 ./Source/application/app_buck_converter/app_buck_converter.o
  .debug_macro   0x00000000       0x6a ./Source/application/app_buck_converter/app_buck_converter.o
  .debug_macro   0x00000000      0x1df ./Source/application/app_buck_converter/app_buck_converter.o
- .debug_macro   0x00000000       0x16 ./Source/application/app_buck_converter/app_buck_converter.o
+ .debug_macro   0x00000000       0x1c ./Source/application/app_buck_converter/app_buck_converter.o
  .debug_macro   0x00000000      0x2a1 ./Source/application/app_buck_converter/app_buck_converter.o
  .debug_macro   0x00000000       0x2e ./Source/application/app_buck_converter/app_buck_converter.o
  .debug_macro   0x00000000       0x2f ./Source/application/app_buck_converter/app_buck_converter.o
@@ -3641,10 +3700,12 @@ Discarded input sections
  .debug_macro   0x00000000      0x12d ./Source/application/app_buck_converter/app_buck_converter.o
  .debug_macro   0x00000000       0x22 ./Source/application/app_buck_converter/app_buck_converter.o
  .debug_macro   0x00000000       0x16 ./Source/application/app_buck_converter/app_buck_converter.o
- .debug_line    0x00000000      0xb7b ./Source/application/app_buck_converter/app_buck_converter.o
- .debug_str     0x00000000    0xd0bca ./Source/application/app_buck_converter/app_buck_converter.o
+ .debug_macro   0x00000000       0x22 ./Source/application/app_buck_converter/app_buck_converter.o
+ .debug_macro   0x00000000       0x4c ./Source/application/app_buck_converter/app_buck_converter.o
+ .debug_line    0x00000000      0xcf6 ./Source/application/app_buck_converter/app_buck_converter.o
+ .debug_str     0x00000000    0xd0f79 ./Source/application/app_buck_converter/app_buck_converter.o
  .comment       0x00000000       0x44 ./Source/application/app_buck_converter/app_buck_converter.o
- .debug_frame   0x00000000       0x58 ./Source/application/app_buck_converter/app_buck_converter.o
+ .debug_frame   0x00000000       0x80 ./Source/application/app_buck_converter/app_buck_converter.o
  .ARM.attributes
                 0x00000000       0x34 ./Source/application/app_buck_converter/app_buck_converter.o
  .group         0x00000000        0xc ./Source/bsp/bsp_adc/bsp_adc.o
@@ -4053,9 +4114,9 @@ Discarded input sections
  .text.init_adc_sensor_driver
                 0x00000000       0x24 ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
  .text.read_adc_sensor_value
-                0x00000000       0x88 ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
- .debug_info    0x00000000      0x208 ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
- .debug_abbrev  0x00000000      0x129 ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
+                0x00000000       0x94 ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
+ .debug_info    0x00000000      0x23d ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
+ .debug_abbrev  0x00000000      0x12d ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
  .debug_aranges
                 0x00000000       0x28 ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
  .debug_rnglists
@@ -4105,12 +4166,68 @@ Discarded input sections
  .debug_macro   0x00000000       0x4d ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
  .debug_macro   0x00000000      0x12d ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
  .debug_macro   0x00000000       0x22 ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
- .debug_line    0x00000000      0x889 ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
- .debug_str     0x00000000    0xd0a1a ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
+ .debug_line    0x00000000      0x892 ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
+ .debug_str     0x00000000    0xd0a5b ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
  .comment       0x00000000       0x44 ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
  .debug_frame   0x00000000       0x58 ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
  .ARM.attributes
                 0x00000000       0x34 ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
+ .group         0x00000000        0xc ./Source/device_drivers/communication_driver/com_driver.o
+ .group         0x00000000        0xc ./Source/device_drivers/communication_driver/com_driver.o
+ .group         0x00000000        0xc ./Source/device_drivers/communication_driver/com_driver.o
+ .group         0x00000000        0xc ./Source/device_drivers/communication_driver/com_driver.o
+ .group         0x00000000        0xc ./Source/device_drivers/communication_driver/com_driver.o
+ .group         0x00000000        0xc ./Source/device_drivers/communication_driver/com_driver.o
+ .group         0x00000000        0xc ./Source/device_drivers/communication_driver/com_driver.o
+ .group         0x00000000        0xc ./Source/device_drivers/communication_driver/com_driver.o
+ .group         0x00000000        0xc ./Source/device_drivers/communication_driver/com_driver.o
+ .group         0x00000000        0xc ./Source/device_drivers/communication_driver/com_driver.o
+ .group         0x00000000        0xc ./Source/device_drivers/communication_driver/com_driver.o
+ .text          0x00000000        0x0 ./Source/device_drivers/communication_driver/com_driver.o
+ .data          0x00000000        0x0 ./Source/device_drivers/communication_driver/com_driver.o
+ .bss           0x00000000        0x0 ./Source/device_drivers/communication_driver/com_driver.o
+ .bss.m_com_message_buffer
+                0x00000000        0x0 ./Source/device_drivers/communication_driver/com_driver.o
+ .bss.m_com_configs_ptr
+                0x00000000        0x4 ./Source/device_drivers/communication_driver/com_driver.o
+ .text.init_com_driver
+                0x00000000       0x2c ./Source/device_drivers/communication_driver/com_driver.o
+ .text.trigger_send_of_message
+                0x00000000       0x4c ./Source/device_drivers/communication_driver/com_driver.o
+ .text.send_signal_over_com
+                0x00000000       0x1a ./Source/device_drivers/communication_driver/com_driver.o
+ .text.send_periodic_message_timeout_cb
+                0x00000000       0x1c ./Source/device_drivers/communication_driver/com_driver.o
+ .text.send_message_over_related_bus
+                0x00000000       0x4a ./Source/device_drivers/communication_driver/com_driver.o
+ .text.find_message_with_signal_id
+                0x00000000       0x26 ./Source/device_drivers/communication_driver/com_driver.o
+ .text.start_periodic_tx_messages_timers
+                0x00000000       0x18 ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_info    0x00000000      0x5ca ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_abbrev  0x00000000      0x1fa ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_aranges
+                0x00000000       0x50 ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_rnglists
+                0x00000000       0x37 ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_macro   0x00000000       0xad ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_macro   0x00000000      0xad8 ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_macro   0x00000000       0x22 ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_macro   0x00000000       0x8e ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_macro   0x00000000       0x51 ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_macro   0x00000000      0x103 ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_macro   0x00000000       0x6a ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_macro   0x00000000      0x1df ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_macro   0x00000000       0x22 ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_macro   0x00000000       0x1c ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_macro   0x00000000       0x4c ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_macro   0x00000000      0x190 ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_line    0x00000000      0x652 ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_str     0x00000000     0x4a02 ./Source/device_drivers/communication_driver/com_driver.o
+ .comment       0x00000000       0x44 ./Source/device_drivers/communication_driver/com_driver.o
+ .debug_frame   0x00000000      0x11c ./Source/device_drivers/communication_driver/com_driver.o
+ .ARM.attributes
+                0x00000000       0x34 ./Source/device_drivers/communication_driver/com_driver.o
  .group         0x00000000        0xc ./Source/device_drivers/software_timer/software_timer.o
  .group         0x00000000        0xc ./Source/device_drivers/software_timer/software_timer.o
  .group         0x00000000        0xc ./Source/device_drivers/software_timer/software_timer.o
@@ -4124,23 +4241,23 @@ Discarded input sections
  .data          0x00000000        0x0 ./Source/device_drivers/software_timer/software_timer.o
  .bss           0x00000000        0x0 ./Source/device_drivers/software_timer/software_timer.o
  .bss.m_software_timers
-                0x00000000        0xc ./Source/device_drivers/software_timer/software_timer.o
+                0x00000000       0x18 ./Source/device_drivers/software_timer/software_timer.o
  .bss.m_software_timer_general_config_ptr
                 0x00000000        0x4 ./Source/device_drivers/software_timer/software_timer.o
  .text.init_software_timer_module
                 0x00000000       0x24 ./Source/device_drivers/software_timer/software_timer.o
  .text.start_software_timer
-                0x00000000       0x60 ./Source/device_drivers/software_timer/software_timer.o
+                0x00000000       0x68 ./Source/device_drivers/software_timer/software_timer.o
  .text.stop_software_timer
-                0x00000000       0x30 ./Source/device_drivers/software_timer/software_timer.o
+                0x00000000       0x34 ./Source/device_drivers/software_timer/software_timer.o
  .text.run_all_software_timers
                 0x00000000       0x44 ./Source/device_drivers/software_timer/software_timer.o
  .text.check_status_of_software_timer
-                0x00000000       0x2c ./Source/device_drivers/software_timer/software_timer.o
+                0x00000000       0x38 ./Source/device_drivers/software_timer/software_timer.o
  .text.timer_timeout_process
-                0x00000000       0xcc ./Source/device_drivers/software_timer/software_timer.o
- .debug_info    0x00000000      0x34d ./Source/device_drivers/software_timer/software_timer.o
- .debug_abbrev  0x00000000      0x177 ./Source/device_drivers/software_timer/software_timer.o
+                0x00000000       0xd0 ./Source/device_drivers/software_timer/software_timer.o
+ .debug_info    0x00000000      0x397 ./Source/device_drivers/software_timer/software_timer.o
+ .debug_abbrev  0x00000000      0x168 ./Source/device_drivers/software_timer/software_timer.o
  .debug_aranges
                 0x00000000       0x48 ./Source/device_drivers/software_timer/software_timer.o
  .debug_rnglists
@@ -4153,12 +4270,12 @@ Discarded input sections
  .debug_macro   0x00000000      0x103 ./Source/device_drivers/software_timer/software_timer.o
  .debug_macro   0x00000000       0x6a ./Source/device_drivers/software_timer/software_timer.o
  .debug_macro   0x00000000      0x1df ./Source/device_drivers/software_timer/software_timer.o
- .debug_macro   0x00000000       0x16 ./Source/device_drivers/software_timer/software_timer.o
+ .debug_macro   0x00000000       0x1c ./Source/device_drivers/software_timer/software_timer.o
  .debug_macro   0x00000000      0x190 ./Source/device_drivers/software_timer/software_timer.o
- .debug_line    0x00000000      0x55d ./Source/device_drivers/software_timer/software_timer.o
- .debug_str     0x00000000     0x4498 ./Source/device_drivers/software_timer/software_timer.o
+ .debug_line    0x00000000      0x575 ./Source/device_drivers/software_timer/software_timer.o
+ .debug_str     0x00000000     0x44db ./Source/device_drivers/software_timer/software_timer.o
  .comment       0x00000000       0x44 ./Source/device_drivers/software_timer/software_timer.o
- .debug_frame   0x00000000       0xf8 ./Source/device_drivers/software_timer/software_timer.o
+ .debug_frame   0x00000000       0xf0 ./Source/device_drivers/software_timer/software_timer.o
  .ARM.attributes
                 0x00000000       0x34 ./Source/device_drivers/software_timer/software_timer.o
  .group         0x00000000        0xc ./Source/libraries/pid_controller/pid_controller.o
@@ -4455,12 +4572,14 @@ LOAD ./Project_Configs/adc_sensor_driver_cfg/adc_sensor_driver_cfg.o
 LOAD ./Project_Configs/app_buck_converter_cfg/app_buck_converter_cfg.o
 LOAD ./Project_Configs/bsp_gpio_cfg/bsp_gpio_cfg.o
 LOAD ./Project_Configs/bsp_pwm_config/bsp_pwm_cfg.o
+LOAD ./Project_Configs/com_driver_cfg/com_driver_cfg.o
 LOAD ./Project_Configs/software_timer_cfg/software_timer_cfg.o
 LOAD ./Source/application/app_buck_converter/app_buck_converter.o
 LOAD ./Source/bsp/bsp_adc/bsp_adc.o
 LOAD ./Source/bsp/bsp_gpio/bsp_gpio.o
 LOAD ./Source/bsp/bsp_pwm/bsp_pwm.o
 LOAD ./Source/device_drivers/adc_sensor_driver/adc_sensor_driver.o
+LOAD ./Source/device_drivers/communication_driver/com_driver.o
 LOAD ./Source/device_drivers/software_timer/software_timer.o
 LOAD ./Source/libraries/pid_controller/pid_controller.o
 START GROUP

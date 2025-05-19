@@ -1,2 +1,2 @@
 ../Source/device_drivers/adc_sensor_driver/adc_sensor_driver.c:22:6:init_adc_sensor_driver	16	static
-../Source/device_drivers/adc_sensor_driver/adc_sensor_driver.c:51:6:read_adc_sensor_value	40	static
+../Source/device_drivers/adc_sensor_driver/adc_sensor_driver.c:51:20:read_adc_sensor_value	40	static
