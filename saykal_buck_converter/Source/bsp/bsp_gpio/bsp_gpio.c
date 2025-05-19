@@ -30,6 +30,9 @@ static void enable_used_gpio_pin_clock(GPIO_TypeDef* gpio_port);
  */
 void init_bsp_gpio(const gpio_pin_cfg_t *gpio_pin_configs_ptr)
 {
+	__HAL_RCC_GPIOB_CLK_ENABLE();
+	__HAL_RCC_GPIOA_CLK_ENABLE();
+	__HAL_RCC_GPIOH_CLK_ENABLE();
     if(NULL != gpio_pin_configs_ptr)
     {
         m_last_gpio_pin_config_ptr = (gpio_pin_cfg_t *)gpio_pin_configs_ptr;
