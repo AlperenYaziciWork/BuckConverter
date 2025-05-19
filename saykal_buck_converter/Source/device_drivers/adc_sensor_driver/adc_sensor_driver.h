@@ -16,8 +16,8 @@ typedef bsp_adc_status_e (*read_sensor_adc_raw_value_function_t)(float *raw_valu
 
 typedef enum
 {
-	ADC_SENSOR_ERROR,
-	ADC_SENSOR_OK
+	ADC_SENSOR_ERROR_e,
+	ADC_SENSOR_OK_e
 
 }adc_sensor_state_e;
 

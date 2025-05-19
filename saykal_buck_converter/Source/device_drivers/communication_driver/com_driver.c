@@ -248,17 +248,17 @@ static void send_message_over_related_bus(com_message_bus_e message_bus,
 {
     switch (message_bus)
     {
-        case MESSAGE_BUS_CANBUS:
+        case MESSAGE_BUS_CANBUS_e:
         {
             send_message_over_canbus(message_id,message_data_ptr,message_length);
             break;
         }
-        case MESSAGE_BUS_SPI:
+        case MESSAGE_BUS_SPI_e:
         {
             // message transmission bus easly change in configuration.
             break;
         }
-        case MESSAGE_BUS_UART:
+        case MESSAGE_BUS_UART_e:
         {
             // message transmission bus easly change in configuration.
             break;
@@ -320,7 +320,7 @@ static inline bool signal_to_message_locate(signal_base_info_t signal_info,
     com_signal_endianness_e endian = signal_info.com_signal_endianness;
     uint32_t pdu_bit_index = start_bit;
 
-    if (COM_SIGNAL_ENDIANNESS_LITTLE_ENDIAN == endian)
+    if (COM_SIGNAL_ENDIANNESS_LITTLE_ENDIAN_e == endian)
     {
         for (uint8_t signal_bit_idx = 0;
              signal_bit_idx < length;
@@ -340,7 +340,7 @@ static inline bool signal_to_message_locate(signal_base_info_t signal_info,
         }
 
     }
-    else if(COM_SIGNAL_ENDIANNESS_BIG_ENDIAN == endian)
+    else if(COM_SIGNAL_ENDIANNESS_BIG_ENDIAN_e == endian)
     {
         uint8_t signal_bit_idx = length;
 

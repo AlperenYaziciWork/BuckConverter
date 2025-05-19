@@ -30,9 +30,9 @@ typedef uint16_t com_signal_id_t;
 typedef enum
 {
     ///< Motorola byte order endianness
-    COM_SIGNAL_ENDIANNESS_BIG_ENDIAN,
+    COM_SIGNAL_ENDIANNESS_BIG_ENDIAN_e,
     ///< Intel byte order endianness
-    COM_SIGNAL_ENDIANNESS_LITTLE_ENDIAN,
+    COM_SIGNAL_ENDIANNESS_LITTLE_ENDIAN_e,
 
 }com_signal_endianness_e;
 
@@ -45,38 +45,38 @@ typedef enum
 typedef enum
 {
     ///< boolen variable type
-    COM_SIGNAL_VARIABLE_BOOLEAN,
+    COM_SIGNAL_VARIABLE_BOOLEAN_e,
     ///< float 32 bit variable type
-    COM_SIGNAL_VARIABLE_FLOAT32,
+    COM_SIGNAL_VARIABLE_FLOAT32_e,
     ///< float 64 bit variable type
-    COM_SIGNAL_VARIABLE_FLOAT64,
+    COM_SIGNAL_VARIABLE_FLOAT64_e,
     ///< signed int 16 bit data type
-    COM_SIGNAL_VARIABLE_SINT16,
+    COM_SIGNAL_VARIABLE_SINT16_e,
     ///< signed int 32 bit data type
-    COM_SIGNAL_VARIABLE_SINT32,
+    COM_SIGNAL_VARIABLE_SINT32_e,
     ///< signed int 64 bit data type
-    COM_SIGNAL_VARIABLE_SINT64,
+    COM_SIGNAL_VARIABLE_SINT64_e,
     ///< signed int 8 bit data type
-    COM_SIGNAL_VARIABLE_SINT8,
+    COM_SIGNAL_VARIABLE_SINT8_e,
     ///< unsigned int 16 bit data type
-    COM_SIGNAL_VARIABLE_UINT16,
+    COM_SIGNAL_VARIABLE_UINT16_e,
     ///< unsigned int 32 bit data type
-    COM_SIGNAL_VARIABLE_UINT32,
+    COM_SIGNAL_VARIABLE_UINT32_e,
     ///< unsigned int 64 bit data type
-    COM_SIGNAL_VARIABLE_UINT64,
+    COM_SIGNAL_VARIABLE_UINT64_e,
     ///< unsigned int 8 bit data type
-    COM_SIGNAL_VARIABLE_UINT8,
+    COM_SIGNAL_VARIABLE_UINT8_e,
     ///< unsigned int8 has dynamic len data type
-    COM_SIGNAL_VARIABLE_UINT8_DYN,
+    COM_SIGNAL_VARIABLE_UINT8_DYN_e,
     ///< unsigned int 8 bit array
-    COM_SIGNAL_VARIABLE_UINT8_N,
+    COM_SIGNAL_VARIABLE_UINT8_N_e,
 
 }com_signal_variable_e;
 
 typedef enum{
-	MESSAGE_BUS_CANBUS,
-	MESSAGE_BUS_UART, // It is defined to demonstration,
-	MESSAGE_BUS_SPI, // It is defined to demonstration
+	MESSAGE_BUS_CANBUS_e,
+	MESSAGE_BUS_UART_e, // It is defined to demonstration,
+	MESSAGE_BUS_SPI_e, // It is defined to demonstration
 
 }com_message_bus_e;
 

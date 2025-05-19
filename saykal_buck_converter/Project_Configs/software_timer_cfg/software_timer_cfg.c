@@ -14,15 +14,15 @@
 static const software_timer_cfg_t m_software_timers_configs[] =
 {
 	{
-		.reload_option = TIMER_RELOAD_PERIODIC,
+		.reload_option = TIMER_RELOAD_PERIODIC_e,
 		.timeout_callback_func = control_out_voltage_with_current_limit,
 	},
 	{
-		.reload_option = TIMER_RELOAD_PERIODIC,
+		.reload_option = TIMER_RELOAD_PERIODIC_e,
 		.timeout_callback_func = send_periodic_message_timeout_cb,
 	},
 	{
-		.reload_option = TIMER_RELOAD_AUTO,
+		.reload_option = TIMER_RELOAD_AUTO_e,
 		.timeout_callback_func = calculate_system_temperature,
 	},
 };

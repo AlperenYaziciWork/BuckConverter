@@ -12,15 +12,6 @@
 #include "stm32f4xx_hal.h"
 #include "bsp_gpio_cfg.h"
 
-typedef enum
-{
-	PIN_0 = 0,
-	PIN_1,
-	PIN_2,
-	PIN_3,
-	PIN_4,
-	PIN_COUNT,
-}gpio_pin_id_e;
 
 typedef struct
 {
