@@ -1,8 +1,12 @@
-/*
- * bsp_can.c
+/**
+ * @file bsp_can.c
+ * @brief CAN (Controller Area Network) hardware abstraction layer implementation.
  *
- *  Created on: May 19, 2025
- *      Author: alperenyazici
+ * This module handles initialization and transmission of CAN messages using
+ * STM32 HAL library. It is designed to interact with the hardware-specific CAN peripheral.
+ *
+ * @date May 19, 2025
+ * @author alperenyazici
  */
 
 
@@ -11,20 +15,44 @@
 #include "stdbool.h"
 
 #ifndef BSP_CAN_TX_MESSAGE
+// Number of transmit CAN messages configured
 #define BSP_CAN_TX_MESSAGE 0U
 #endif
 
+/// Internal CAN driver handle
 static CAN_HandleTypeDef m_can_driver;
 
+/// Pointer to CAN configuration
 static bsp_can_cfg_t *m_bsp_can_config_ptr = NULL;
 
+/// Transmit header structure used when sending CAN messages
 static CAN_TxHeaderTypeDef m_bsp_can_tx_header;
 
+/// Mailbox index for CAN message transmission
 static uint32_t m_mailbox = 0U;
 
+/**
+ * @brief Searches for the given message ID in the CAN configuration table.
+ *
+ * @param[in]  message_id             Message identifier to search for.
+ * @param[out] tx_message_cfg_ptr     Pointer to store found message configuration.
+ * @return true if message is found, false otherwise.
+ *
+ * @note The current function does not return the pointer correctly
+ * because `tx_message_cfg_ptr` is passed by value. Consider changing
+ * to `can_tx_message_cfg_t **` for proper use.
+ */
 static bool find_message_id_from_config(uint16_t message_id,
 										const can_tx_message_cfg_t *tx_message_cfg_ptr);
 
+/**
+ * @brief Initializes the CAN hardware with given configuration.
+ *
+ * This function sets up the GPIO pins, CAN peripheral settings (timing, modes)
+ * and starts the CAN module.
+ *
+ * @param[in] bsp_can_configs_ptr Pointer to the CAN configuration structure.
+ */
 void init_bsp_can(const bsp_can_cfg_t *bsp_can_configs_ptr)
 {
 	if(NULL == bsp_can_configs_ptr)
@@ -62,6 +90,16 @@ void init_bsp_can(const bsp_can_cfg_t *bsp_can_configs_ptr)
 
 }
 
+/**
+ * @brief Sends a CAN message using the specified message ID and data.
+ *
+ * This function searches for the message ID in the configuration, fills
+ * the transmit header, and queues the message for transmission using HAL.
+ *
+ * @param[in] message_id       Identifier of the message to send.
+ * @param[in] message_data_ptr Pointer to the data to send.
+ * @param[in] data_len         Length of the data in bytes.
+ */
 void send_message_over_canbus(uint16_t message_id,
 							  uint8_t *message_data_ptr ,
 							  uint16_t data_len)
@@ -101,7 +139,17 @@ void send_message_over_canbus(uint16_t message_id,
 							 &m_mailbox);
 }
 
-
+/**
+ * @brief Searches for the given message ID in the CAN configuration table.
+ *
+ * @param[in]  message_id             Message identifier to search for.
+ * @param[out] tx_message_cfg_ptr     Pointer to store found message configuration.
+ * @return true if message is found, false otherwise.
+ *
+ * @note The current function does not return the pointer correctly
+ * because `tx_message_cfg_ptr` is passed by value. Consider changing
+ * to `can_tx_message_cfg_t **` for proper use.
+ */
 static bool find_message_id_from_config(uint16_t message_id,
 										const can_tx_message_cfg_t *tx_message_cfg_ptr)
 {
