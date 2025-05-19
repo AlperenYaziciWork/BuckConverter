@@ -111,7 +111,7 @@ void control_out_voltage_with_current_limit(software_timer_id_t sw_timer_id)
 	adc_sensor_state_e adc_read_state =
 		read_adc_sensor_value(BUCK_CONVERTOR_OUT_VOLTAGE_RESISTOR_SENSOR_ID , &sensed_output_voltage);
 
-	if(ADC_SENSOR_ERROR == adc_read_state)
+	if(ADC_SENSOR_ERROR_e == adc_read_state)
 	{
 		report_sensor_error();
 		return;
@@ -128,7 +128,7 @@ void control_out_voltage_with_current_limit(software_timer_id_t sw_timer_id)
 	adc_read_state =
 			read_adc_sensor_value(BUCK_CONVERTOR_OUT_CURRENT_ACS724_SENSOR_ID , &sensed_output_current);
 
-	if(ADC_SENSOR_ERROR == adc_read_state)
+	if(ADC_SENSOR_ERROR_e == adc_read_state)
 	{
 		report_sensor_error();
 		return;

@@ -17,10 +17,10 @@
 typedef enum
 {
     /// Standard 11-bit CAN Identifier
-    CANID_STANDARD,
+    CANID_STANDARD_e,
 
     /// Extended 29-bit CAN Identifier
-    CANID_EXTENDED,
+    CANID_EXTENDED_e,
 
 } canid_e;
 

@@ -13,8 +13,8 @@
 
 
 typedef enum{
-    BSP_ADC_STATE_OK,
-    BSP_ADC_STATE_ERROR,
+    BSP_ADC_STATE_OK_e,
+    BSP_ADC_STATE_ERROR_e,
 
 }bsp_adc_status_e;
 
@@ -33,8 +33,8 @@ void init_bsp_adc();
  * @brief Reads the ADC value from the current sense channel.
  *
  * @param[out] voltage_value_ptr Pointer to store the ADC voltage value.
- * @retval BSP_ADC_STATE_OK if the conversion is successful.
- * @retval BSP_ADC_STATE_ERROR if the conversion fails.
+ * @retval BSP_ADC_STATE_OK_e if the conversion is successful.
+ * @retval BSP_ADC_STATE_ERROR_e if the conversion fails.
  */
 bsp_adc_status_e read_current_sense_adc_value(float *voltage_value_ptr);
 
@@ -42,8 +42,8 @@ bsp_adc_status_e read_current_sense_adc_value(float *voltage_value_ptr);
  * @brief Reads the ADC value from the voltage sense channel.
  *
  * @param[out] voltage_value_ptr Pointer to store the ADC voltage value.
- * @retval BSP_ADC_STATE_OK if the conversion is successful.
- * @retval BSP_ADC_STATE_ERROR if the conversion fails.
+ * @retval BSP_ADC_STATE_OK_e if the conversion is successful.
+ * @retval BSP_ADC_STATE_ERROR_e if the conversion fails.
  */
 bsp_adc_status_e read_voltage_sense_adc_value(float *voltage_value_ptr);
 
@@ -51,8 +51,8 @@ bsp_adc_status_e read_voltage_sense_adc_value(float *voltage_value_ptr);
  * @brief Reads the ADC value from the temperature sense channel.
  *
  * @param[out] voltage_value_ptr Pointer to store the ADC voltage value.
- * @retval BSP_ADC_STATE_OK if the conversion is successful.
- * @retval BSP_ADC_STATE_ERROR if the conversion fails.
+ * @retval BSP_ADC_STATE_OK_e if the conversion is successful.
+ * @retval BSP_ADC_STATE_ERROR_e if the conversion fails.
  */
 bsp_adc_status_e read_temperature_sense_adc_value(float *voltage_value_ptr);
 

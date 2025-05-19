@@ -115,12 +115,12 @@ void send_message_over_canbus(uint16_t message_id,
 		return;
 	}
 
-	if(CANID_STANDARD == tx_message_cfg_ptr->id_type)
+	if(CANID_STANDARD_e == tx_message_cfg_ptr->id_type)
 	{
 		m_bsp_can_tx_header.IDE = CAN_ID_STD;
 		m_bsp_can_tx_header.StdId = tx_message_cfg_ptr->can_id;
 	}
-	else if(CANID_EXTENDED == tx_message_cfg_ptr->id_type)
+	else if(CANID_EXTENDED_e == tx_message_cfg_ptr->id_type)
 	{
 		m_bsp_can_tx_header.IDE = CAN_ID_EXT;
 		m_bsp_can_tx_header.ExtId = tx_message_cfg_ptr->can_id;

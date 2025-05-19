@@ -13,17 +13,17 @@ static const can_tx_message_cfg_t m_can_tx_messages_config[] =
 {
 		{
 			.can_id = 0x123,
-			.id_type = CANID_EXTENDED,
+			.id_type = CANID_EXTENDED_e,
 			.message_id = COM_BUCK_VOLTAGE_INFO_MESSAGE_ID,
 		},
 		{
 			.can_id = 0x456,
-			.id_type = CANID_EXTENDED,
+			.id_type = CANID_EXTENDED_e,
 			.message_id = COM_BUCK_CURRENT_INFO_MESSAGE_ID,
 		},
 		{
 			.can_id = 0x789,
-			.id_type = CANID_EXTENDED,
+			.id_type = CANID_EXTENDED_e,
 			.message_id = COM_SYSTEM_INFO_MESSAGE_ID,
 		},
 };

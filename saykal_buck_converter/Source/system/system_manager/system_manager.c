@@ -21,17 +21,18 @@
  * @brief Defines the operating states of the system.
  */
 typedef enum{
-	SYSTEM_STATE_INIT,           /**< System initialization phase */
-	SYSTEM_STATE_RUNNING,        /**< Normal operation phase */
-	SYSTEM_STATE_ERROR,          /**< Critical error occurred */
-	SYSTEM_STATE_SAFE_RUNNING,   /**< Safe mode, only communication is active */
-	SYSTEM_STATE_IDLE,           /**< Idle state, power-saving or inactive */
+	SYSTEM_STATE_INIT_e,           /**< System initialization phase */
+	SYSTEM_STATE_RUNNING_e,        /**< Normal operation phase */
+	SYSTEM_STATE_ERROR_e,          /**< Critical error occurred */
+	SYSTEM_STATE_SAFE_RUNNING_e,   /**< Safe mode, only communication is active */
+	SYSTEM_STATE_IDLE_e,           /**< Idle state, power-saving or inactive */
+
 } system_state_e;
 
 /**
  * @brief Current state of the system.
  */
-static system_state_e m_system_state = SYSTEM_STATE_INIT;
+static system_state_e m_system_state = SYSTEM_STATE_INIT_e;
 
 /**
  * @brief External GPIO pin configuration table.
@@ -122,12 +123,12 @@ void run_state_machine_of_system_manager(void)
 {
 	switch(m_system_state)
 	{
-		case SYSTEM_STATE_IDLE:
+		case SYSTEM_STATE_IDLE_e:
 		{
 			// it may be necessary for power management
 			break;
 		}
-		case SYSTEM_STATE_INIT:
+		case SYSTEM_STATE_INIT_e:
 		{
 			HAL_Init();
 			SystemClock_Config();
@@ -146,11 +147,11 @@ void run_state_machine_of_system_manager(void)
 			start_software_timer(SYSTEM_TEMPERATURE_PROCESS_TIMER_ID,
 								 SYSTEM_TEMPERATURE_SENSE_PERIOD_MS);
 
-			m_system_state = SYSTEM_STATE_RUNNING;
+			m_system_state = SYSTEM_STATE_RUNNING_e;
 
 			break;
 		}
-		case SYSTEM_STATE_RUNNING:
+		case SYSTEM_STATE_RUNNING_e:
 		{
 			send_signal_over_com(COM_SYSTEM_STATE_SIGNAL_ID,(uint8_t*)&m_system_state);
 			// all application process connected a software timer callback so it is enough
@@ -162,11 +163,11 @@ void run_state_machine_of_system_manager(void)
 
 			if(true == over_current_error_flag)
 			{
-				m_system_state = SYSTEM_STATE_ERROR;
+				m_system_state = SYSTEM_STATE_ERROR_e;
 			}
 			break;
 		}
-		case SYSTEM_STATE_ERROR:
+		case SYSTEM_STATE_ERROR_e:
 		{
 			send_signal_over_com(COM_SYSTEM_STATE_SIGNAL_ID,(uint8_t*)&m_system_state);
 			trigger_send_of_message(COM_SYSTEM_INFO_MESSAGE_ID);
@@ -177,11 +178,11 @@ void run_state_machine_of_system_manager(void)
 			// stop buck converter mosfet PWM
 			stop_pwm_channel(PWM_TIMER_ID_FOR_BUCK_MOSFET);
 
-			m_system_state = SYSTEM_STATE_SAFE_RUNNING;
+			m_system_state = SYSTEM_STATE_SAFE_RUNNING_e;
 			break;
 		}
 
-		case SYSTEM_STATE_SAFE_RUNNING:
+		case SYSTEM_STATE_SAFE_RUNNING_e:
 		{
 			send_signal_over_com(COM_SYSTEM_STATE_SIGNAL_ID,(uint8_t*)&m_system_state);
 

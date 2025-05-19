@@ -21,18 +21,18 @@ typedef void (*timer_timeout_cb_func_t)(software_timer_id_t sw_timer_id);
 
 typedef enum{
 
-	TIMER_STATE_STOP,
-	TIMER_STATE_RUNNING,
-	TIMER_STATE_TIMEOUT,
-	TIMER_STATE_ERROR,
+	TIMER_STATE_STOP_e,
+	TIMER_STATE_RUNNING_e,
+	TIMER_STATE_TIMEOUT_e,
+	TIMER_STATE_ERROR_e,
 
 }timer_state_e;
 
 typedef enum{
 
-	TIMER_RELOAD_MANUEL,	// it waits to be started by a user.
-	TIMER_RELOAD_AUTO,     // reload this value to start_tick : current tick
-	TIMER_RELOAD_PERIODIC, // reload this value to start_tick : start_tick + timeout_value
+	TIMER_RELOAD_MANUEL_e,	// it waits to be started by a user.
+	TIMER_RELOAD_AUTO_e,     // reload this value to start_tick : current tick
+	TIMER_RELOAD_PERIODIC_e, // reload this value to start_tick : start_tick + timeout_value
 
 }timer_reload_option_e;
 
