@@ -24,6 +24,7 @@ typedef enum{
 	TIMER_STATE_STOP,
 	TIMER_STATE_RUNNING,
 	TIMER_STATE_TIMEOUT,
+	TIMER_STATE_ERROR,
 
 }timer_state_e;
 

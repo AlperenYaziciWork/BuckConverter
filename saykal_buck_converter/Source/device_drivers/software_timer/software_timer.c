@@ -78,7 +78,7 @@ timer_state_e check_status_of_software_timer(software_timer_id_t sw_timer_id)
 	if(sw_timer_id >= SOFTWARE_TIMER_CNT)
 	{
 		report_development_error();
-		return;
+		return TIMER_STATE_ERROR;
 	}
 	
 	return m_software_timers[sw_timer_id].state;
