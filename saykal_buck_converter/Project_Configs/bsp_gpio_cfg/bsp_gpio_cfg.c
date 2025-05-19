@@ -2,9 +2,9 @@
 #include "bsp_gpio.h"
 #include "stm32f4xx_hal_gpio.h"
 
-const uint32_t m_can_pins_alternate = GPIO_AF9_CAN1;
+static const uint32_t m_can_pins_alternate = GPIO_AF9_CAN1;
 
-const gpio_pin_cfg_t PinCfgContainer[] = 
+const gpio_pin_cfg_t g_pin_cfg_container[] =
 {
     {
 		.Port = GPIOA ,

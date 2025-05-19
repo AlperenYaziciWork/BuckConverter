@@ -9,6 +9,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include Source/system/system_manager/subdir.mk
 -include Source/system/error_manager/subdir.mk
 -include Source/libraries/pid_controller/subdir.mk
 -include Source/device_drivers/software_timer/subdir.mk

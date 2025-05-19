@@ -50,7 +50,7 @@ typedef struct
  *
  * @param[in] bsp_pwm_configs_ptr Pointer to array of PWM configurations.
  */
-void init_bsp_pwm(bsp_pwm_config_t *bsp_pwm_configs_ptr);
+void init_bsp_pwm(const bsp_pwm_config_t *bsp_pwm_configs_ptr);
 
 /**
  * @brief Starts a specific PWM channel.

@@ -5,23 +5,23 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Project_Configs/bsp_gpio_cfg/bsp_gpio_cfg.c 
+../Source/system/system_manager/system_manager.c 
 
 OBJS += \
-./Project_Configs/bsp_gpio_cfg/bsp_gpio_cfg.o 
+./Source/system/system_manager/system_manager.o 
 
 C_DEPS += \
-./Project_Configs/bsp_gpio_cfg/bsp_gpio_cfg.d 
+./Source/system/system_manager/system_manager.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-Project_Configs/bsp_gpio_cfg/%.o Project_Configs/bsp_gpio_cfg/%.su Project_Configs/bsp_gpio_cfg/%.cyclo: ../Project_Configs/bsp_gpio_cfg/%.c Project_Configs/bsp_gpio_cfg/subdir.mk
+Source/system/system_manager/%.o Source/system/system_manager/%.su Source/system/system_manager/%.cyclo: ../Source/system/system_manager/%.c Source/system/system_manager/subdir.mk
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs/bsp_pwm_config" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs/bsp_gpio_cfg" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp/bsp_gpio" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp/bsp_adc" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp/bsp_pwm" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs/adc_sensor_driver_cfg" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/device_drivers/adc_sensor_driver" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/libraries/pid_controller" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/device_drivers/software_timer" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs/software_timer_cfg" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/application/app_buck_converter" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs/com_driver_cfg" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/device_drivers/communication_driver" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs/bsp_can_cfg" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/bsp/bsp_can" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/system/error_manager" -I"/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/system/system_manager" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
-clean: clean-Project_Configs-2f-bsp_gpio_cfg
+clean: clean-Source-2f-system-2f-system_manager
 
-clean-Project_Configs-2f-bsp_gpio_cfg:
-	-$(RM) ./Project_Configs/bsp_gpio_cfg/bsp_gpio_cfg.cyclo ./Project_Configs/bsp_gpio_cfg/bsp_gpio_cfg.d ./Project_Configs/bsp_gpio_cfg/bsp_gpio_cfg.o ./Project_Configs/bsp_gpio_cfg/bsp_gpio_cfg.su
+clean-Source-2f-system-2f-system_manager:
+	-$(RM) ./Source/system/system_manager/system_manager.cyclo ./Source/system/system_manager/system_manager.d ./Source/system/system_manager/system_manager.o ./Source/system/system_manager/system_manager.su
 
-.PHONY: clean-Project_Configs-2f-bsp_gpio_cfg
+.PHONY: clean-Source-2f-system-2f-system_manager
 

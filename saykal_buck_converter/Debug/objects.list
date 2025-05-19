@@ -41,3 +41,4 @@
 "./Source/device_drivers/software_timer/software_timer.o"
 "./Source/libraries/pid_controller/pid_controller.o"
 "./Source/system/error_manager/error_manager.o"
+"./Source/system/system_manager/system_manager.o"

@@ -65,11 +65,11 @@ static void init_timer_pwm_channels(uint8_t timer_idx_of_pwm_channels);
  * 
  * @param[in] bsp_pwm_configs_ptr Pointer to array of PWM configurations.
  */
-void init_bsp_pwm(bsp_pwm_config_t *bsp_pwm_configs_ptr)
+void init_bsp_pwm(const bsp_pwm_config_t *bsp_pwm_configs_ptr)
 {
 	if(NULL != bsp_pwm_configs_ptr)
 	{
-		m_last_bsp_pwm_config_ptr = bsp_pwm_configs_ptr;
+		m_last_bsp_pwm_config_ptr = (bsp_pwm_config_t *)bsp_pwm_configs_ptr;
 	}
 
 	for(uint8_t pwm_timer_idx = 0U; pwm_timer_idx < PWM_TIMER_TOTAL_CNT;pwm_timer_idx++)

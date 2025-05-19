@@ -42,4 +42,5 @@ Source/device_drivers/communication_driver \
 Source/device_drivers/software_timer \
 Source/libraries/pid_controller \
 Source/system/error_manager \
+Source/system/system_manager \
 

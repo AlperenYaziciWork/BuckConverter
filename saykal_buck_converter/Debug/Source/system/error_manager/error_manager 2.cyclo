@@ -2,5 +2,4 @@
 ../Source/system/error_manager/error_manager.c:38:6:report_development_error	1
 ../Source/system/error_manager/error_manager.c:50:6:report_over_current	1
 ../Source/system/error_manager/error_manager.c:63:6:report_init_error	1
-../Source/system/error_manager/error_manager.c:75:6:get_system_overcurrent_error_status	2
-../Source/system/error_manager/error_manager.c:90:9:get_system_error_status	1
+../Source/system/error_manager/error_manager.c:75:9:get_system_error_status	1

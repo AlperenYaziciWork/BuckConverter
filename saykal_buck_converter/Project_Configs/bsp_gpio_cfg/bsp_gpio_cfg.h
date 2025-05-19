@@ -7,4 +7,5 @@
 #define TOTAL_PIN_CNT			2U
 
 
+
 #endif

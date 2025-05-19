@@ -36,7 +36,8 @@ Project_Configs/software_timer_cfg/software_timer_cfg.o: \
  /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/application/app_buck_converter/app_buck_converter.h \
  /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/libraries/pid_controller/pid_controller.h \
  /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/device_drivers/communication_driver/com_driver.h \
- /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs/com_driver_cfg/com_driver_cfg.h
+ /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs/com_driver_cfg/com_driver_cfg.h \
+ /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/system/system_manager/system_manager.h
 /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/device_drivers/software_timer/software_timer.h:
 /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs/software_timer_cfg/software_timer_cfg.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
@@ -74,3 +75,4 @@ Project_Configs/software_timer_cfg/software_timer_cfg.o: \
 /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/libraries/pid_controller/pid_controller.h:
 /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/device_drivers/communication_driver/com_driver.h:
 /Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Project_Configs/com_driver_cfg/com_driver_cfg.h:
+/Users/alperenyazici/Documents/GitHub/BuckConverter/saykal_buck_converter/Source/system/system_manager/system_manager.h:

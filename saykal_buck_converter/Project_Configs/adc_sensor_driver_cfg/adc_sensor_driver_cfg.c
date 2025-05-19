@@ -11,7 +11,7 @@
 #include "adc_sensor_driver_cfg.h"
 #include "bsp_adc.h"
 
-const adc_sensor_driver_config_t adc_sensors_configuration[] =
+const adc_sensor_driver_config_t g_adc_sensors_configuration[] =
 {
 	[BUCK_CONVERTOR_OUT_CURRENT_ACS724_SENSOR_ID] = {
 		.raw_voltage_factor = 2U, // opamp used input of adc 

@@ -9,7 +9,7 @@
 #define ERROR_MANAGER_H_
 
 #include "stdint.h"
-
+#include "stdbool.h"
 
 /**
  * @def ERROR_TYPE_SENSOR
@@ -80,5 +80,12 @@ void report_init_error(void);
  * @return uint8_t A bitfield representing all system errors currently flagged.
  */
 uint8_t get_system_error_status(void);
+
+/**
+ * @brief Returns whether an overcurrent system error is currently active.
+ *
+ * @return uint8_t 1 if the overcurrent error bit is set, 0 otherwise.
+ */
+bool get_system_overcurrent_error_status(void);
 
 #endif /* ERROR_MANAGER_H_ */
