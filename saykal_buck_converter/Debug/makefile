@@ -15,12 +15,14 @@ RM := rm -rf
 -include Source/device_drivers/adc_sensor_driver/subdir.mk
 -include Source/bsp/bsp_pwm/subdir.mk
 -include Source/bsp/bsp_gpio/subdir.mk
+-include Source/bsp/bsp_can/subdir.mk
 -include Source/bsp/bsp_adc/subdir.mk
 -include Source/application/app_buck_converter/subdir.mk
 -include Project_Configs/software_timer_cfg/subdir.mk
 -include Project_Configs/com_driver_cfg/subdir.mk
 -include Project_Configs/bsp_pwm_config/subdir.mk
 -include Project_Configs/bsp_gpio_cfg/subdir.mk
+-include Project_Configs/bsp_can_cfg/subdir.mk
 -include Project_Configs/app_buck_converter_cfg/subdir.mk
 -include Project_Configs/adc_sensor_driver_cfg/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk

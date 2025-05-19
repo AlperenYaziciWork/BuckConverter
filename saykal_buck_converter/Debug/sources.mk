@@ -27,12 +27,14 @@ Core/Startup \
 Drivers/STM32F4xx_HAL_Driver/Src \
 Project_Configs/adc_sensor_driver_cfg \
 Project_Configs/app_buck_converter_cfg \
+Project_Configs/bsp_can_cfg \
 Project_Configs/bsp_gpio_cfg \
 Project_Configs/bsp_pwm_config \
 Project_Configs/com_driver_cfg \
 Project_Configs/software_timer_cfg \
 Source/application/app_buck_converter \
 Source/bsp/bsp_adc \
+Source/bsp/bsp_can \
 Source/bsp/bsp_gpio \
 Source/bsp/bsp_pwm \
 Source/device_drivers/adc_sensor_driver \
