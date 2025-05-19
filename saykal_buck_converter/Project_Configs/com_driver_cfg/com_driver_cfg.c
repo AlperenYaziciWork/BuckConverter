@@ -85,7 +85,7 @@ static const com_signal_t m_com_signals_of_system_info_message[] =
 		.signal_base_info =
 		{
 			.com_bit_position = 16U,
-			.com_bit_size = 2U,
+			.com_bit_size = 3U,
 			.com_signal_endianness = COM_SIGNAL_ENDIANNESS_LITTLE_ENDIAN_e,
 			.com_signal_variable_type = COM_SIGNAL_VARIABLE_UINT8_e,
 		},
@@ -95,8 +95,8 @@ static const com_signal_t m_com_signals_of_system_info_message[] =
 		.signal_id = COM_SYSTEM_ERROR_STATE_SIGNAL_ID,
 		.signal_base_info =
 		{
-			.com_bit_position = 18U,
-			.com_bit_size = 14U,
+			.com_bit_position = 19U,
+			.com_bit_size = 4U,
 			.com_signal_endianness = COM_SIGNAL_ENDIANNESS_LITTLE_ENDIAN_e,
 			.com_signal_variable_type = COM_SIGNAL_VARIABLE_UINT8_e,
 		},
