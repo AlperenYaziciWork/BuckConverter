@@ -11,11 +11,13 @@
 #include "stdint.h"
 #include "software_timer_cfg.h"
 
-typedef void (*timer_timeout_cb_func_t)(void);
+
 
 typedef uint32_t (*get_timer_tick_ms_func_t)(void);
 
 typedef uint8_t software_timer_id_t;
+
+typedef void (*timer_timeout_cb_func_t)(software_timer_id_t sw_timer_id);
 
 typedef enum{
 
