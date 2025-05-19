@@ -21,11 +21,11 @@
  * @brief Defines the operating states of the system.
  */
 typedef enum{
-	SYSTEM_STATE_INIT_e,           /**< System initialization phase */
-	SYSTEM_STATE_RUNNING_e,        /**< Normal operation phase */
-	SYSTEM_STATE_ERROR_e,          /**< Critical error occurred */
-	SYSTEM_STATE_SAFE_RUNNING_e,   /**< Safe mode, only communication is active */
-	SYSTEM_STATE_IDLE_e,           /**< Idle state, power-saving or inactive */
+	SYSTEM_STATE_INIT_e = 0,            /**< System initialization phase */
+	SYSTEM_STATE_RUNNING_e = 1,        /**< Normal operation phase */
+	SYSTEM_STATE_ERROR_e = 2 ,          /**< Critical error occurred */
+	SYSTEM_STATE_SAFE_RUNNING_e = 3,   /**< Safe mode, only communication is active */
+	SYSTEM_STATE_IDLE_e = 4,           /**< Idle state, power-saving or inactive */
 
 } system_state_e;
 
@@ -110,7 +110,8 @@ static void SystemClock_Config(void);
 static uint16_t scale_temperature_for_send_over_com(float temperature,
 													float scale_min,
 													float scale_max,
-													float zero_offset);
+													float zero_offset,
+													float factor);
 
 /**
  * @brief Executes the system's main state machine.
@@ -213,7 +214,8 @@ void calculate_system_temperature(software_timer_id_t sw_timer_id )
 			scale_temperature_for_send_over_com(system_temperature,
 												SYSTEM_TEMPERATURE_SCALE_MIN,
 												SYSTEM_TEMPERATURE_SCALE_MAX,
-												SYSTEM_TEMPERATURE_SCALE_ZERO_OFFSET);
+												SYSTEM_TEMPERATURE_SCALE_ZERO_OFFSET,
+												SYSTEM_TEMPERATURE_SCALE_FACTOR);
 
 	send_signal_over_com(COM_SYSTEM_TEMPERATURE_SIGNAL_ID,&raw_com_value);
 }
@@ -231,10 +233,11 @@ void calculate_system_temperature(software_timer_id_t sw_timer_id )
 static uint16_t scale_temperature_for_send_over_com(float temperature,
 													float scale_min,
 													float scale_max,
-													float zero_offset)
+													float zero_offset,
+													float factor)
 {
     // Offset uygulandıktan sonra yeni sıcaklık
-    float adjusted_temp = temperature + zero_offset;
+    float adjusted_temp = (temperature + zero_offset)/factor;
 
     // Aralık kontrolü
     if (adjusted_temp < scale_min) adjusted_temp = scale_min;

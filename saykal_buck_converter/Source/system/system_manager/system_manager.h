@@ -40,6 +40,12 @@
 #define SYSTEM_TEMPERATURE_SCALE_ZERO_OFFSET	0.0f
 
 /**
+ * @brief Factor to be multiplied to the raw temperature value before scaling.
+ *
+ */
+#define SYSTEM_TEMPERATURE_SCALE_FACTOR			0.1f
+
+/**
  * @brief Executes the system's main state machine.
  *
  * @details This function controls the main operating flow of the system, transitioning
