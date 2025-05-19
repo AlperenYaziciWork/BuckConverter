@@ -1,6 +1,7 @@
 #include "bsp_pwm.h"
 #include "bsp_gpio.h"
 #include "stdbool.h"
+#include "error_manager.h"
 
 /**
  * @def PWM_TIMER_TOTAL_CNT

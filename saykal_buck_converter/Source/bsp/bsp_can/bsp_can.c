@@ -13,6 +13,7 @@
 #include "bsp_can.h"
 #include "bsp_gpio.h"
 #include "stdbool.h"
+#include "error_manager.h"
 
 #ifndef BSP_CAN_TX_MESSAGE
 // Number of transmit CAN messages configured

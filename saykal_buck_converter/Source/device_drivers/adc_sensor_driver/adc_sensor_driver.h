@@ -5,11 +5,12 @@
  *      Author: alperenyazici
  */
 
-#ifndef ADC_SENSOR_DRIVER_CS_H_
-#define ADC_SENSOR_DRIVER_CS_H_
+#ifndef ADC_SENSOR_DRIVER_H_
+#define ADC_SENSOR_DRIVER_H_
 
 #include "bsp_adc.h"
 #include "adc_sensor_driver_cfg.h"
+
 
 typedef bsp_adc_status_e (*read_sensor_adc_raw_value_function_t)(float *raw_value_ptr);
 

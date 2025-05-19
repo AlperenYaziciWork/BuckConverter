@@ -7,6 +7,7 @@
 
 #include "software_timer.h"
 #include "stddef.h"
+#include "error_manager.h"
 
 typedef struct{
 

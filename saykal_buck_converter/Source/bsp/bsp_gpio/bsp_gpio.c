@@ -1,4 +1,5 @@
 #include "bsp_gpio.h"
+#include "error_manager.h"
 
 #define ERROR_STATE_ABNORMAL_RETUN_VALUE 0xFFU
 
