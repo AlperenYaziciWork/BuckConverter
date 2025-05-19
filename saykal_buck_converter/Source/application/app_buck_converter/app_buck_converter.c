@@ -14,8 +14,27 @@
  * @brief Pointer to the active buck converter configuration.
  */
 static buck_converter_cfg_t *m_buck_converter_cfg = NULL;
+
+/**
+ * @brief Indicates if a critical error (e.g., overcurrent) has been detected.
+ *
+ * If true, control loop will stop to protect the system.
+ */
 static bool is_cricial_error_detected = false;
 
+/**
+ * @brief Monitors output current and detects overcurrent condition.
+ *
+ * This is a basic counter-based filter that checks whether the sensed current exceeds
+ * a defined overcurrent threshold continuously over a number of cycles.
+ *
+ * @param[in] sensed_output_current The measured output current value.
+ * @param[in] over_current_value The threshold value for overcurrent detection.
+ * @param[in] over_current_occurance_time_min Minimum number of consecutive detections to confirm overcurrent.
+ *
+ * @retval true  Overcurrent condition detected.
+ * @retval false No overcurrent condition detected.
+ */
 static bool monitor_current_to_detect_over_current(float sensed_output_current ,
 												   float over_current_value,
 												   uint16_t over_current_occurance_time_min);
@@ -119,7 +138,6 @@ void control_out_voltage_with_current_limit(void)
 	set_pwm_duty(PWM_TIMER_ID_FOR_BUCK_MOSFET , duty_reference);
 }
 
-// basic filter
 static bool monitor_current_to_detect_over_current(float sensed_output_current ,
 												   float over_current_value,
 												   uint16_t over_current_occurance_time_min)

@@ -11,16 +11,63 @@
 #include "stdint.h"
 #include "pid_controller.h"
 
+/**
+ * @brief Configuration structure for the buck converter control system.
+ *
+ * This structure holds all the parameters and references required to
+ * initialize and operate a buck converter using cascaded PID control.
+ */
 typedef struct
 {
-	pid_controller_t *pid_out_voltage_cotroller_ptr;
-	pid_controller_t *pid_out_current_cotroller_ptr;
-	uint8_t period_time_process_of_controller_ms;
-	float v_out_ref;
-	float i_out_max;
-	uint16_t over_current_occurence_time_min; // over current value should be detected at least this
+    /**
+     * @brief Pointer to the PID controller for output voltage regulation.
+     *
+     * This controller calculates the desired output current reference based
+     * on the error between measured and target output voltage.
+     */
+    pid_controller_t *pid_out_voltage_cotroller_ptr;
 
-}buck_converter_cfg_t;
+    /**
+     * @brief Pointer to the PID controller for output current control.
+     *
+     * This controller generates the PWM duty cycle based on the error between
+     * measured and target output current (which is derived from the outer voltage loop).
+     */
+    pid_controller_t *pid_out_current_cotroller_ptr;
+
+    /**
+     * @brief Period (in milliseconds) to execute the control process.
+     *
+     * Determines how frequently the control loop should run. It is typically
+     * used by a software timer.
+     */
+    uint8_t period_time_process_of_controller_ms;
+
+    /**
+     * @brief Reference voltage value (in volts) to be maintained at the converter output.
+     *
+     * This is the target voltage used by the outer PID voltage controller.
+     */
+    float v_out_ref;
+
+    /**
+     * @brief Maximum allowable output current (in amperes).
+     *
+     * If the measured output current exceeds this value consistently for a certain
+     * duration, it is treated as an overcurrent fault.
+     */
+    float i_out_max;
+
+    /**
+     * @brief Minimum duration (in control loop cycles) over which overcurrent must persist to be considered a fault.
+     *
+     * Helps prevent false positives due to short spikes or noise. If overcurrent is
+     * detected for at least this number of consecutive cycles, a critical fault is reported.
+     */
+    uint16_t over_current_occurence_time_min;
+
+} buck_converter_cfg_t;
+
 
 /**
  * @brief Initializes the buck converter application with the given configuration.
