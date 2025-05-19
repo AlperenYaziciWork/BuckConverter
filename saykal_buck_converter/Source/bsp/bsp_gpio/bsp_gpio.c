@@ -59,7 +59,14 @@ void init_gpio_pin(uint8_t pin_no)
   GPIO_InitTypeDef GPIO_InitStruct = {0};
   GPIO_InitStruct.Pin = m_last_gpio_pin_config_ptr[pin_no].Pin;
   GPIO_InitStruct.Mode = m_last_gpio_pin_config_ptr[pin_no].Mode; 
-  GPIO_InitStruct.Pull = m_last_gpio_pin_config_ptr[pin_no].Pull;  
+  GPIO_InitStruct.Pull = m_last_gpio_pin_config_ptr[pin_no].Pull;
+
+  if(NULL != m_last_gpio_pin_config_ptr[pin_no].Alternate_ptr)
+  {
+	  GPIO_InitStruct.Alternate =
+		 *m_last_gpio_pin_config_ptr[pin_no].Alternate_ptr;
+  }
+
   HAL_GPIO_Init(m_last_gpio_pin_config_ptr[pin_no].Port, &GPIO_InitStruct);
 }
 

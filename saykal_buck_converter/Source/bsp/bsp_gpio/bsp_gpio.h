@@ -28,6 +28,8 @@ typedef struct
 	uint32_t 	Mode;
 	uint32_t 	Pull;
 	uint32_t 	Speed;
+	const uint32_t	*Alternate_ptr;
+
 }gpio_pin_cfg_t;
 
 
