@@ -5,21 +5,21 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .isr_vector   00000188  08000000  08000000  00001000  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  1 .text         00004524  08000188  08000188  00001188  2**2
+  1 .text         00004538  08000188  08000188  00001188  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .rodata       000001a8  080046ac  080046ac  000056ac  2**2
+  2 .rodata       000001a8  080046c0  080046c0  000056c0  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  08004854  08004854  00006064  2**0
+  3 .ARM.extab    00000000  08004868  08004868  00006064  2**0
                   CONTENTS, READONLY
-  4 .ARM          00000008  08004854  08004854  00005854  2**2
+  4 .ARM          00000008  08004868  08004868  00005868  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  5 .preinit_array 00000000  0800485c  0800485c  00006064  2**0
+  5 .preinit_array 00000000  08004870  08004870  00006064  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  6 .init_array   00000004  0800485c  0800485c  0000585c  2**2
+  6 .init_array   00000004  08004870  08004870  00005870  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  7 .fini_array   00000004  08004860  08004860  00005860  2**2
+  7 .fini_array   00000004  08004874  08004874  00005874  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  8 .data         00000064  20000000  08004864  00006000  2**2
+  8 .data         00000064  20000000  08004878  00006000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
   9 .ccmram       00000000  10000000  10000000  00006064  2**0
                   CONTENTS
@@ -29,25 +29,25 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  12 .ARM.attributes 00000030  00000000  00000000  00006064  2**0
                   CONTENTS, READONLY
- 13 .debug_info   0000f166  00000000  00000000  00006094  2**0
+ 13 .debug_info   0000f175  00000000  00000000  00006094  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 00002f51  00000000  00000000  000151fa  2**0
+ 14 .debug_abbrev 00002f51  00000000  00000000  00015209  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_aranges 00000ec0  00000000  00000000  00018150  2**3
+ 15 .debug_aranges 00000ec0  00000000  00000000  00018160  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_rnglists 00000ab6  00000000  00000000  00019010  2**0
+ 16 .debug_rnglists 00000ab6  00000000  00000000  00019020  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  00023792  00000000  00000000  00019ac6  2**0
+ 17 .debug_macro  0002379e  00000000  00000000  00019ad6  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   000162e2  00000000  00000000  0003d258  2**0
+ 18 .debug_line   000162e5  00000000  00000000  0003d274  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000d62db  00000000  00000000  0005353a  2**0
+ 19 .debug_str    000d65bb  00000000  00000000  00053559  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000043  00000000  00000000  00129815  2**0
+ 20 .comment      00000043  00000000  00000000  00129b14  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  00003888  00000000  00000000  00129858  2**2
+ 21 .debug_frame  00003888  00000000  00000000  00129b58  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 00000078  00000000  00000000  0012d0e0  2**0
+ 22 .debug_line_str 00000078  00000000  00000000  0012d3e0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -66,7 +66,7 @@ Disassembly of section .text:
  800019e:	bd10      	pop	{r4, pc}
  80001a0:	20000064 	.word	0x20000064
  80001a4:	00000000 	.word	0x00000000
- 80001a8:	08004694 	.word	0x08004694
+ 80001a8:	080046a8 	.word	0x080046a8
 
 080001ac <frame_dummy>:
  80001ac:	b508      	push	{r3, lr}
@@ -78,7 +78,7 @@ Disassembly of section .text:
  80001ba:	bd08      	pop	{r3, pc}
  80001bc:	00000000 	.word	0x00000000
  80001c0:	20000068 	.word	0x20000068
- 80001c4:	08004694 	.word	0x08004694
+ 80001c4:	080046a8 	.word	0x080046a8
 
 080001c8 <__aeabi_uldivmod>:
  80001c8:	b953      	cbnz	r3, 80001e0 <__aeabi_uldivmod+0x18>
@@ -851,7 +851,7 @@ LoopFillZerobss:
 
 /* Call static constructors */
     bl __libc_init_array
- 80006ce:	f003 ffbd 	bl	800464c <__libc_init_array>
+ 80006ce:	f003 ffc7 	bl	8004660 <__libc_init_array>
 /* Call the application's entry point.*/
   bl  main
  80006d2:	f7ff ff0f 	bl	80004f4 <main>
@@ -864,7 +864,7 @@ LoopFillZerobss:
   ldr r1, =_edata
  80006e0:	20000064 	.word	0x20000064
   ldr r2, =_sidata
- 80006e4:	08004864 	.word	0x08004864
+ 80006e4:	08004878 	.word	0x08004878
   ldr r2, =_sbss
  80006e8:	20000064 	.word	0x20000064
   ldr r4, =_ebss
@@ -5302,7 +5302,7 @@ HAL_StatusTypeDef HAL_RCC_ClockConfig(const RCC_ClkInitTypeDef  *RCC_ClkInitStru
  8001fb6:	bf00      	nop
  8001fb8:	40023c00 	.word	0x40023c00
  8001fbc:	40023800 	.word	0x40023800
- 8001fc0:	080046ac 	.word	0x080046ac
+ 8001fc0:	080046c0 	.word	0x080046c0
  8001fc4:	20000000 	.word	0x20000000
  8001fc8:	20000004 	.word	0x20000004
 
@@ -8215,7 +8215,7 @@ void control_out_voltage_with_current_limit(software_timer_id_t sw_timer_id)
  80030dc:	4603      	mov	r3, r0
  80030de:	77fb      	strb	r3, [r7, #31]
 
-	if(ADC_SENSOR_ERROR == adc_read_state)
+	if(ADC_SENSOR_ERROR_e == adc_read_state)
  80030e0:	7ffb      	ldrb	r3, [r7, #31]
  80030e2:	2b00      	cmp	r3, #0
  80030e4:	d102      	bne.n	80030ec <control_out_voltage_with_current_limit+0x34>
@@ -8262,7 +8262,7 @@ void control_out_voltage_with_current_limit(software_timer_id_t sw_timer_id)
  800312e:	4603      	mov	r3, r0
  8003130:	77fb      	strb	r3, [r7, #31]
 
-	if(ADC_SENSOR_ERROR == adc_read_state)
+	if(ADC_SENSOR_ERROR_e == adc_read_state)
  8003132:	7ffb      	ldrb	r3, [r7, #31]
  8003134:	2b00      	cmp	r3, #0
  8003136:	d102      	bne.n	800313e <control_out_voltage_with_current_limit+0x86>
@@ -8493,8 +8493,8 @@ void init_bsp_adc()
 
 08003298 <read_current_sense_adc_value>:
  * @param[out] raw_value Pointer to store the ADC voltage value.
- * @retval BSP_ADC_STATE_OK if the conversion is successful.
- * @retval BSP_ADC_STATE_ERROR if the conversion fails.
+ * @retval BSP_ADC_STATE_OK_e if the conversion is successful.
+ * @retval BSP_ADC_STATE_ERROR_e if the conversion fails.
  */
 bsp_adc_status_e read_current_sense_adc_value(float *voltage_value_ptr)
 {
@@ -8502,7 +8502,7 @@ bsp_adc_status_e read_current_sense_adc_value(float *voltage_value_ptr)
  800329a:	b084      	sub	sp, #16
  800329c:	af00      	add	r7, sp, #0
  800329e:	6078      	str	r0, [r7, #4]
-    bsp_adc_status_e read_status = BSP_ADC_STATE_ERROR;
+    bsp_adc_status_e read_status = BSP_ADC_STATE_ERROR_e;
  80032a0:	2301      	movs	r3, #1
  80032a2:	73fb      	strb	r3, [r7, #15]
     configure_current_sense_adc_channel();
@@ -8532,7 +8532,7 @@ bsp_adc_status_e read_current_sense_adc_value(float *voltage_value_ptr)
  80032d2:	ee67 7a87 	vmul.f32	s15, s15, s14
  80032d6:	687b      	ldr	r3, [r7, #4]
  80032d8:	edc3 7a00 	vstr	s15, [r3]
-        read_status = BSP_ADC_STATE_OK;
+        read_status = BSP_ADC_STATE_OK_e;
  80032dc:	2300      	movs	r3, #0
  80032de:	73fb      	strb	r3, [r7, #15]
     }
@@ -8553,8 +8553,8 @@ bsp_adc_status_e read_current_sense_adc_value(float *voltage_value_ptr)
 
 080032f8 <read_voltage_sense_adc_value>:
  * @param[out] voltage_value_ptr Pointer to store the ADC voltage value.
- * @retval BSP_ADC_STATE_OK if the conversion is successful.
- * @retval BSP_ADC_STATE_ERROR if the conversion fails.
+ * @retval BSP_ADC_STATE_OK_e if the conversion is successful.
+ * @retval BSP_ADC_STATE_ERROR_e if the conversion fails.
  */
 bsp_adc_status_e read_voltage_sense_adc_value(float *voltage_value_ptr)
 {
@@ -8562,7 +8562,7 @@ bsp_adc_status_e read_voltage_sense_adc_value(float *voltage_value_ptr)
  80032fa:	b084      	sub	sp, #16
  80032fc:	af00      	add	r7, sp, #0
  80032fe:	6078      	str	r0, [r7, #4]
-    bsp_adc_status_e read_status = BSP_ADC_STATE_ERROR;
+    bsp_adc_status_e read_status = BSP_ADC_STATE_ERROR_e;
  8003300:	2301      	movs	r3, #1
  8003302:	73fb      	strb	r3, [r7, #15]
     configure_voltage_sense_adc_channel();
@@ -8592,7 +8592,7 @@ bsp_adc_status_e read_voltage_sense_adc_value(float *voltage_value_ptr)
  8003332:	ee67 7a87 	vmul.f32	s15, s15, s14
  8003336:	687b      	ldr	r3, [r7, #4]
  8003338:	edc3 7a00 	vstr	s15, [r3]
-        read_status = BSP_ADC_STATE_OK;
+        read_status = BSP_ADC_STATE_OK_e;
  800333c:	2300      	movs	r3, #0
  800333e:	73fb      	strb	r3, [r7, #15]
     }
@@ -8613,8 +8613,8 @@ bsp_adc_status_e read_voltage_sense_adc_value(float *voltage_value_ptr)
 
 08003358 <read_temperature_sense_adc_value>:
  * @param[out] voltage_value_ptr Pointer to store the ADC voltage value.
- * @retval BSP_ADC_STATE_OK if the conversion is successful.
- * @retval BSP_ADC_STATE_ERROR if the conversion fails.
+ * @retval BSP_ADC_STATE_OK_e if the conversion is successful.
+ * @retval BSP_ADC_STATE_ERROR_e if the conversion fails.
  */
 bsp_adc_status_e read_temperature_sense_adc_value(float *voltage_value_ptr)
 {
@@ -8622,7 +8622,7 @@ bsp_adc_status_e read_temperature_sense_adc_value(float *voltage_value_ptr)
  800335a:	b084      	sub	sp, #16
  800335c:	af00      	add	r7, sp, #0
  800335e:	6078      	str	r0, [r7, #4]
-    bsp_adc_status_e read_status = BSP_ADC_STATE_ERROR;
+    bsp_adc_status_e read_status = BSP_ADC_STATE_ERROR_e;
  8003360:	2301      	movs	r3, #1
  8003362:	73fb      	strb	r3, [r7, #15]
     configure_temperature_sense_adc_channel();
@@ -8652,7 +8652,7 @@ bsp_adc_status_e read_temperature_sense_adc_value(float *voltage_value_ptr)
  8003392:	ee67 7a87 	vmul.f32	s15, s15, s14
  8003396:	687b      	ldr	r3, [r7, #4]
  8003398:	edc3 7a00 	vstr	s15, [r3]
-        read_status = BSP_ADC_STATE_OK;
+        read_status = BSP_ADC_STATE_OK_e;
  800339c:	2300      	movs	r3, #0
  800339e:	73fb      	strb	r3, [r7, #15]
     }
@@ -8977,7 +8977,7 @@ void send_message_over_canbus(uint16_t message_id,
  800355a:	e026      	b.n	80035aa <send_message_over_canbus+0x82>
 	}
 
-	if(CANID_STANDARD == tx_message_cfg_ptr->id_type)
+	if(CANID_STANDARD_e == tx_message_cfg_ptr->id_type)
  800355c:	68fb      	ldr	r3, [r7, #12]
  800355e:	7a1b      	ldrb	r3, [r3, #8]
  8003560:	2b00      	cmp	r3, #0
@@ -8994,7 +8994,7 @@ void send_message_over_canbus(uint16_t message_id,
  8003570:	6013      	str	r3, [r2, #0]
  8003572:	e00e      	b.n	8003592 <send_message_over_canbus+0x6a>
 	}
-	else if(CANID_EXTENDED == tx_message_cfg_ptr->id_type)
+	else if(CANID_EXTENDED_e == tx_message_cfg_ptr->id_type)
  8003574:	68fb      	ldr	r3, [r7, #12]
  8003576:	7a1b      	ldrb	r3, [r3, #8]
  8003578:	2b01      	cmp	r3, #1
@@ -9431,7 +9431,7 @@ void init_bsp_pwm(const bsp_pwm_config_t *bsp_pwm_configs_ptr)
  8003824:	2220      	movs	r2, #32
  8003826:	2100      	movs	r1, #0
  8003828:	4618      	mov	r0, r3
- 800382a:	f000 ff07 	bl	800463c <memset>
+ 800382a:	f000 ff11 	bl	8004650 <memset>
 
 	  m_htim[pwm_timer_idx].Instance = bsp_pwm_configs_ptr[pwm_timer_idx].timer_instance_ptr;
  800382e:	f897 2047 	ldrb.w	r2, [r7, #71]	@ 0x47
@@ -10427,11 +10427,11 @@ adc_sensor_state_e read_adc_sensor_value(uint8_t sensor_id , float *sensor_value
  8003e88:	685b      	ldr	r3, [r3, #4]
  8003e8a:	613b      	str	r3, [r7, #16]
 
-	adc_sensor_state_e success_status = ADC_SENSOR_OK;
+	adc_sensor_state_e success_status = ADC_SENSOR_OK_e;
  8003e8c:	2301      	movs	r3, #1
  8003e8e:	77fb      	strb	r3, [r7, #31]
 
-	if(BSP_ADC_STATE_OK == raw_voltage_read_state)
+	if(BSP_ADC_STATE_OK_e == raw_voltage_read_state)
  8003e90:	7fbb      	ldrb	r3, [r7, #30]
  8003e92:	2b00      	cmp	r3, #0
  8003e94:	d111      	bne.n	8003eba <read_adc_sensor_value+0x82>
@@ -10454,7 +10454,7 @@ adc_sensor_state_e read_adc_sensor_value(uint8_t sensor_id , float *sensor_value
 	else
 	{
 		// low level notified an error already. It is not necessary in here.
-		success_status = ADC_SENSOR_ERROR;
+		success_status = ADC_SENSOR_ERROR_e;
  8003eba:	2300      	movs	r3, #0
  8003ebc:	77fb      	strb	r3, [r7, #31]
 	}
@@ -10783,7 +10783,7 @@ void start_software_timer(software_timer_id_t sw_timer_id,uint32_t timeout_value
  8004042:	683a      	ldr	r2, [r7, #0]
  8004044:	601a      	str	r2, [r3, #0]
 
-	m_software_timers[sw_timer_id].state = TIMER_STATE_RUNNING;
+	m_software_timers[sw_timer_id].state = TIMER_STATE_RUNNING_e;
  8004046:	79fa      	ldrb	r2, [r7, #7]
  8004048:	4906      	ldr	r1, [pc, #24]	@ (8004064 <start_software_timer+0x64>)
  800404a:	4613      	mov	r3, r2
@@ -10821,7 +10821,7 @@ void stop_software_timer(software_timer_id_t sw_timer_id)
  800407c:	e009      	b.n	8004092 <stop_software_timer+0x2a>
 	}
 
-	m_software_timers[sw_timer_id].state = TIMER_STATE_STOP;
+	m_software_timers[sw_timer_id].state = TIMER_STATE_STOP_e;
  800407e:	79fa      	ldrb	r2, [r7, #7]
  8004080:	4905      	ldr	r1, [pc, #20]	@ (8004098 <stop_software_timer+0x30>)
  8004082:	4613      	mov	r3, r2
@@ -10850,7 +10850,7 @@ void run_all_software_timers(void)
  80040a4:	71fb      	strb	r3, [r7, #7]
  80040a6:	e011      	b.n	80040cc <run_all_software_timers+0x30>
 	{
-		if(TIMER_STATE_TIMEOUT == m_software_timers[timer_idx].state)
+		if(TIMER_STATE_TIMEOUT_e == m_software_timers[timer_idx].state)
  80040a8:	79fa      	ldrb	r2, [r7, #7]
  80040aa:	490c      	ldr	r1, [pc, #48]	@ (80040dc <run_all_software_timers+0x40>)
  80040ac:	4613      	mov	r3, r2
@@ -10934,7 +10934,7 @@ static void timer_timeout_process(software_timer_id_t sw_timer_id)
  8004116:	72fb      	strb	r3, [r7, #11]
 			reload_option;
 
-	if(TIMER_RELOAD_AUTO == timer_reload_option)
+	if(TIMER_RELOAD_AUTO_e == timer_reload_option)
  8004118:	7afb      	ldrb	r3, [r7, #11]
  800411a:	2b01      	cmp	r3, #1
  800411c:	d118      	bne.n	8004150 <timer_timeout_process+0x70>
@@ -10960,7 +10960,7 @@ static void timer_timeout_process(software_timer_id_t sw_timer_id)
  8004138:	601a      	str	r2, [r3, #0]
 
 
-		m_software_timers[sw_timer_id].state = TIMER_STATE_RUNNING;
+		m_software_timers[sw_timer_id].state = TIMER_STATE_RUNNING_e;
  800413a:	79fa      	ldrb	r2, [r7, #7]
  800413c:	491b      	ldr	r1, [pc, #108]	@ (80041ac <timer_timeout_process+0xcc>)
  800413e:	4613      	mov	r3, r2
@@ -10978,7 +10978,7 @@ static void timer_timeout_process(software_timer_id_t sw_timer_id)
 	}
 }
  800414e:	e027      	b.n	80041a0 <timer_timeout_process+0xc0>
-	else if(TIMER_RELOAD_PERIODIC == timer_reload_option)
+	else if(TIMER_RELOAD_PERIODIC_e == timer_reload_option)
  8004150:	7afb      	ldrb	r3, [r7, #11]
  8004152:	2b02      	cmp	r3, #2
  8004154:	d124      	bne.n	80041a0 <timer_timeout_process+0xc0>
@@ -11012,7 +11012,7 @@ static void timer_timeout_process(software_timer_id_t sw_timer_id)
  8004186:	4403      	add	r3, r0
  8004188:	3304      	adds	r3, #4
  800418a:	6019      	str	r1, [r3, #0]
-		m_software_timers[sw_timer_id].state = TIMER_STATE_RUNNING;
+		m_software_timers[sw_timer_id].state = TIMER_STATE_RUNNING_e;
  800418c:	79fa      	ldrb	r2, [r7, #7]
  800418e:	4907      	ldr	r1, [pc, #28]	@ (80041ac <timer_timeout_process+0xcc>)
  8004190:	4613      	mov	r3, r2
@@ -11347,12 +11347,12 @@ void run_state_machine_of_system_manager(void)
 			// it may be necessary for power management
 			break;
 		}
-		case SYSTEM_STATE_INIT:
+		case SYSTEM_STATE_INIT_e:
 		{
 			HAL_Init();
  80043b4:	f7fc f99e 	bl	80006f4 <HAL_Init>
 			SystemClock_Config();
- 80043b8:	f000 f8e4 	bl	8004584 <SystemClock_Config>
+ 80043b8:	f000 f8ee 	bl	8004598 <SystemClock_Config>
 			init_bsp_gpio(g_pin_cfg_container);
  80043bc:	482d      	ldr	r0, [pc, #180]	@ (8004474 <run_state_machine_of_system_manager+0xe8>)
  80043be:	f7ff f90f 	bl	80035e0 <init_bsp_gpio>
@@ -11391,7 +11391,7 @@ void run_state_machine_of_system_manager(void)
  80043fc:	f7ff fe00 	bl	8004000 <start_software_timer>
 								 SYSTEM_TEMPERATURE_SENSE_PERIOD_MS);
 
-			m_system_state = SYSTEM_STATE_RUNNING;
+			m_system_state = SYSTEM_STATE_RUNNING_e;
  8004400:	4b1b      	ldr	r3, [pc, #108]	@ (8004470 <run_state_machine_of_system_manager+0xe4>)
  8004402:	2201      	movs	r2, #1
  8004404:	701a      	strb	r2, [r3, #0]
@@ -11399,7 +11399,7 @@ void run_state_machine_of_system_manager(void)
 			break;
  8004406:	e02f      	b.n	8004468 <run_state_machine_of_system_manager+0xdc>
 		}
-		case SYSTEM_STATE_RUNNING:
+		case SYSTEM_STATE_RUNNING_e:
 		{
 			send_signal_over_com(COM_SYSTEM_STATE_SIGNAL_ID,(uint8_t*)&m_system_state);
  8004408:	4919      	ldr	r1, [pc, #100]	@ (8004470 <run_state_machine_of_system_manager+0xe4>)
@@ -11421,7 +11421,7 @@ void run_state_machine_of_system_manager(void)
  800441e:	2b00      	cmp	r3, #0
  8004420:	d021      	beq.n	8004466 <run_state_machine_of_system_manager+0xda>
 			{
-				m_system_state = SYSTEM_STATE_ERROR;
+				m_system_state = SYSTEM_STATE_ERROR_e;
  8004422:	4b13      	ldr	r3, [pc, #76]	@ (8004470 <run_state_machine_of_system_manager+0xe4>)
  8004424:	2202      	movs	r2, #2
  8004426:	701a      	strb	r2, [r3, #0]
@@ -11429,7 +11429,7 @@ void run_state_machine_of_system_manager(void)
 			break;
  8004428:	e01d      	b.n	8004466 <run_state_machine_of_system_manager+0xda>
 		}
-		case SYSTEM_STATE_ERROR:
+		case SYSTEM_STATE_ERROR_e:
 		{
 			send_signal_over_com(COM_SYSTEM_STATE_SIGNAL_ID,(uint8_t*)&m_system_state);
  800442a:	4911      	ldr	r1, [pc, #68]	@ (8004470 <run_state_machine_of_system_manager+0xe4>)
@@ -11452,7 +11452,7 @@ void run_state_machine_of_system_manager(void)
  8004448:	2000      	movs	r0, #0
  800444a:	f7ff fb2d 	bl	8003aa8 <stop_pwm_channel>
 
-			m_system_state = SYSTEM_STATE_SAFE_RUNNING;
+			m_system_state = SYSTEM_STATE_SAFE_RUNNING_e;
  800444e:	4b08      	ldr	r3, [pc, #32]	@ (8004470 <run_state_machine_of_system_manager+0xe4>)
  8004450:	2203      	movs	r2, #3
  8004452:	701a      	strb	r2, [r3, #0]
@@ -11460,7 +11460,7 @@ void run_state_machine_of_system_manager(void)
  8004454:	e008      	b.n	8004468 <run_state_machine_of_system_manager+0xdc>
 		}
 
-		case SYSTEM_STATE_SAFE_RUNNING:
+		case SYSTEM_STATE_SAFE_RUNNING_e:
 		{
 			send_signal_over_com(COM_SYSTEM_STATE_SIGNAL_ID,(uint8_t*)&m_system_state);
  8004456:	4906      	ldr	r1, [pc, #24]	@ (8004470 <run_state_machine_of_system_manager+0xe4>)
@@ -11487,13 +11487,13 @@ void run_state_machine_of_system_manager(void)
  800446c:	46bd      	mov	sp, r7
  800446e:	bd80      	pop	{r7, pc}
  8004470:	2000019d 	.word	0x2000019d
- 8004474:	08004748 	.word	0x08004748
- 8004478:	08004780 	.word	0x08004780
- 800447c:	08004728 	.word	0x08004728
- 8004480:	0800484c 	.word	0x0800484c
- 8004484:	080046bc 	.word	0x080046bc
- 8004488:	08004830 	.word	0x08004830
- 800448c:	080046ec 	.word	0x080046ec
+ 8004474:	0800475c 	.word	0x0800475c
+ 8004478:	08004794 	.word	0x08004794
+ 800447c:	0800473c 	.word	0x0800473c
+ 8004480:	08004860 	.word	0x08004860
+ 8004484:	080046d0 	.word	0x080046d0
+ 8004488:	08004844 	.word	0x08004844
+ 800448c:	08004700 	.word	0x08004700
  8004490:	00000000 	.word	0x00000000
 
 08004494 <calculate_system_temperature>:
@@ -11519,268 +11519,274 @@ void calculate_system_temperature(software_timer_id_t sw_timer_id )
 	uint16_t raw_com_value =
 			scale_temperature_for_send_over_com(system_temperature,
  80044b0:	edd7 7a03 	vldr	s15, [r7, #12]
- 80044b4:	eddf 1a0a 	vldr	s3, [pc, #40]	@ 80044e0 <calculate_system_temperature+0x4c>
- 80044b8:	ed9f 1a0a 	vldr	s2, [pc, #40]	@ 80044e4 <calculate_system_temperature+0x50>
- 80044bc:	eddf 0a08 	vldr	s1, [pc, #32]	@ 80044e0 <calculate_system_temperature+0x4c>
- 80044c0:	eeb0 0a67 	vmov.f32	s0, s15
- 80044c4:	f000 f810 	bl	80044e8 <scale_temperature_for_send_over_com>
- 80044c8:	4603      	mov	r3, r0
+ 80044b4:	ed9f 2a0b 	vldr	s4, [pc, #44]	@ 80044e4 <calculate_system_temperature+0x50>
+ 80044b8:	eddf 1a0b 	vldr	s3, [pc, #44]	@ 80044e8 <calculate_system_temperature+0x54>
+ 80044bc:	ed9f 1a0b 	vldr	s2, [pc, #44]	@ 80044ec <calculate_system_temperature+0x58>
+ 80044c0:	eddf 0a09 	vldr	s1, [pc, #36]	@ 80044e8 <calculate_system_temperature+0x54>
+ 80044c4:	eeb0 0a67 	vmov.f32	s0, s15
+ 80044c8:	f000 f812 	bl	80044f0 <scale_temperature_for_send_over_com>
+ 80044cc:	4603      	mov	r3, r0
 	uint16_t raw_com_value =
- 80044ca:	817b      	strh	r3, [r7, #10]
+ 80044ce:	817b      	strh	r3, [r7, #10]
 												SYSTEM_TEMPERATURE_SCALE_MIN,
 												SYSTEM_TEMPERATURE_SCALE_MAX,
-												SYSTEM_TEMPERATURE_SCALE_ZERO_OFFSET);
+												SYSTEM_TEMPERATURE_SCALE_ZERO_OFFSET,
+												SYSTEM_TEMPERATURE_SCALE_FACTOR);
 
 	send_signal_over_com(COM_SYSTEM_TEMPERATURE_SIGNAL_ID,&raw_com_value);
- 80044cc:	f107 030a 	add.w	r3, r7, #10
- 80044d0:	4619      	mov	r1, r3
- 80044d2:	2004      	movs	r0, #4
- 80044d4:	f7ff fd36 	bl	8003f44 <send_signal_over_com>
+ 80044d0:	f107 030a 	add.w	r3, r7, #10
+ 80044d4:	4619      	mov	r1, r3
+ 80044d6:	2004      	movs	r0, #4
+ 80044d8:	f7ff fd34 	bl	8003f44 <send_signal_over_com>
 }
- 80044d8:	bf00      	nop
- 80044da:	3710      	adds	r7, #16
- 80044dc:	46bd      	mov	sp, r7
- 80044de:	bd80      	pop	{r7, pc}
- 80044e0:	00000000 	.word	0x00000000
- 80044e4:	428c0000 	.word	0x428c0000
+ 80044dc:	bf00      	nop
+ 80044de:	3710      	adds	r7, #16
+ 80044e0:	46bd      	mov	sp, r7
+ 80044e2:	bd80      	pop	{r7, pc}
+ 80044e4:	3dcccccd 	.word	0x3dcccccd
+ 80044e8:	00000000 	.word	0x00000000
+ 80044ec:	428c0000 	.word	0x428c0000
 
-080044e8 <scale_temperature_for_send_over_com>:
- */
+080044f0 <scale_temperature_for_send_over_com>:
 static uint16_t scale_temperature_for_send_over_com(float temperature,
 													float scale_min,
 													float scale_max,
-													float zero_offset)
+													float zero_offset,
+													float factor)
 {
- 80044e8:	b480      	push	{r7}
- 80044ea:	b089      	sub	sp, #36	@ 0x24
- 80044ec:	af00      	add	r7, sp, #0
- 80044ee:	ed87 0a03 	vstr	s0, [r7, #12]
- 80044f2:	edc7 0a02 	vstr	s1, [r7, #8]
- 80044f6:	ed87 1a01 	vstr	s2, [r7, #4]
- 80044fa:	edc7 1a00 	vstr	s3, [r7]
+ 80044f0:	b480      	push	{r7}
+ 80044f2:	b08b      	sub	sp, #44	@ 0x2c
+ 80044f4:	af00      	add	r7, sp, #0
+ 80044f6:	ed87 0a05 	vstr	s0, [r7, #20]
+ 80044fa:	edc7 0a04 	vstr	s1, [r7, #16]
+ 80044fe:	ed87 1a03 	vstr	s2, [r7, #12]
+ 8004502:	edc7 1a02 	vstr	s3, [r7, #8]
+ 8004506:	ed87 2a01 	vstr	s4, [r7, #4]
     // Offset uygulandıktan sonra yeni sıcaklık
-    float adjusted_temp = temperature + zero_offset;
- 80044fe:	ed97 7a03 	vldr	s14, [r7, #12]
- 8004502:	edd7 7a00 	vldr	s15, [r7]
- 8004506:	ee77 7a27 	vadd.f32	s15, s14, s15
- 800450a:	edc7 7a07 	vstr	s15, [r7, #28]
+    float adjusted_temp = (temperature + zero_offset)/factor;
+ 800450a:	ed97 7a05 	vldr	s14, [r7, #20]
+ 800450e:	edd7 7a02 	vldr	s15, [r7, #8]
+ 8004512:	ee77 6a27 	vadd.f32	s13, s14, s15
+ 8004516:	ed97 7a01 	vldr	s14, [r7, #4]
+ 800451a:	eec6 7a87 	vdiv.f32	s15, s13, s14
+ 800451e:	edc7 7a09 	vstr	s15, [r7, #36]	@ 0x24
 
     // Aralık kontrolü
     if (adjusted_temp < scale_min) adjusted_temp = scale_min;
- 800450e:	ed97 7a07 	vldr	s14, [r7, #28]
- 8004512:	edd7 7a02 	vldr	s15, [r7, #8]
- 8004516:	eeb4 7ae7 	vcmpe.f32	s14, s15
- 800451a:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
- 800451e:	d501      	bpl.n	8004524 <scale_temperature_for_send_over_com+0x3c>
- 8004520:	68bb      	ldr	r3, [r7, #8]
- 8004522:	61fb      	str	r3, [r7, #28]
+ 8004522:	ed97 7a09 	vldr	s14, [r7, #36]	@ 0x24
+ 8004526:	edd7 7a04 	vldr	s15, [r7, #16]
+ 800452a:	eeb4 7ae7 	vcmpe.f32	s14, s15
+ 800452e:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
+ 8004532:	d501      	bpl.n	8004538 <scale_temperature_for_send_over_com+0x48>
+ 8004534:	693b      	ldr	r3, [r7, #16]
+ 8004536:	627b      	str	r3, [r7, #36]	@ 0x24
     if (adjusted_temp > scale_max) adjusted_temp = scale_max;
- 8004524:	ed97 7a07 	vldr	s14, [r7, #28]
- 8004528:	edd7 7a01 	vldr	s15, [r7, #4]
- 800452c:	eeb4 7ae7 	vcmpe.f32	s14, s15
- 8004530:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
- 8004534:	dd01      	ble.n	800453a <scale_temperature_for_send_over_com+0x52>
- 8004536:	687b      	ldr	r3, [r7, #4]
- 8004538:	61fb      	str	r3, [r7, #28]
+ 8004538:	ed97 7a09 	vldr	s14, [r7, #36]	@ 0x24
+ 800453c:	edd7 7a03 	vldr	s15, [r7, #12]
+ 8004540:	eeb4 7ae7 	vcmpe.f32	s14, s15
+ 8004544:	eef1 fa10 	vmrs	APSR_nzcv, fpscr
+ 8004548:	dd01      	ble.n	800454e <scale_temperature_for_send_over_com+0x5e>
+ 800454a:	68fb      	ldr	r3, [r7, #12]
+ 800454c:	627b      	str	r3, [r7, #36]	@ 0x24
 
     // Ölçekleme işlemi
     float normalized = (adjusted_temp - scale_min) / (scale_max - scale_min);
- 800453a:	ed97 7a07 	vldr	s14, [r7, #28]
- 800453e:	edd7 7a02 	vldr	s15, [r7, #8]
- 8004542:	ee77 6a67 	vsub.f32	s13, s14, s15
- 8004546:	ed97 7a01 	vldr	s14, [r7, #4]
- 800454a:	edd7 7a02 	vldr	s15, [r7, #8]
- 800454e:	ee37 7a67 	vsub.f32	s14, s14, s15
- 8004552:	eec6 7a87 	vdiv.f32	s15, s13, s14
- 8004556:	edc7 7a06 	vstr	s15, [r7, #24]
+ 800454e:	ed97 7a09 	vldr	s14, [r7, #36]	@ 0x24
+ 8004552:	edd7 7a04 	vldr	s15, [r7, #16]
+ 8004556:	ee77 6a67 	vsub.f32	s13, s14, s15
+ 800455a:	ed97 7a03 	vldr	s14, [r7, #12]
+ 800455e:	edd7 7a04 	vldr	s15, [r7, #16]
+ 8004562:	ee37 7a67 	vsub.f32	s14, s14, s15
+ 8004566:	eec6 7a87 	vdiv.f32	s15, s13, s14
+ 800456a:	edc7 7a08 	vstr	s15, [r7, #32]
     uint16_t result = (uint16_t)(normalized * 65535.0f); // uint16_t max: 65535
- 800455a:	edd7 7a06 	vldr	s15, [r7, #24]
- 800455e:	ed9f 7a08 	vldr	s14, [pc, #32]	@ 8004580 <scale_temperature_for_send_over_com+0x98>
- 8004562:	ee67 7a87 	vmul.f32	s15, s15, s14
- 8004566:	eefc 7ae7 	vcvt.u32.f32	s15, s15
- 800456a:	ee17 3a90 	vmov	r3, s15
- 800456e:	82fb      	strh	r3, [r7, #22]
+ 800456e:	edd7 7a08 	vldr	s15, [r7, #32]
+ 8004572:	ed9f 7a08 	vldr	s14, [pc, #32]	@ 8004594 <scale_temperature_for_send_over_com+0xa4>
+ 8004576:	ee67 7a87 	vmul.f32	s15, s15, s14
+ 800457a:	eefc 7ae7 	vcvt.u32.f32	s15, s15
+ 800457e:	ee17 3a90 	vmov	r3, s15
+ 8004582:	83fb      	strh	r3, [r7, #30]
 
     return result;
- 8004570:	8afb      	ldrh	r3, [r7, #22]
+ 8004584:	8bfb      	ldrh	r3, [r7, #30]
 }
- 8004572:	4618      	mov	r0, r3
- 8004574:	3724      	adds	r7, #36	@ 0x24
- 8004576:	46bd      	mov	sp, r7
- 8004578:	f85d 7b04 	ldr.w	r7, [sp], #4
- 800457c:	4770      	bx	lr
- 800457e:	bf00      	nop
- 8004580:	477fff00 	.word	0x477fff00
+ 8004586:	4618      	mov	r0, r3
+ 8004588:	372c      	adds	r7, #44	@ 0x2c
+ 800458a:	46bd      	mov	sp, r7
+ 800458c:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8004590:	4770      	bx	lr
+ 8004592:	bf00      	nop
+ 8004594:	477fff00 	.word	0x477fff00
 
-08004584 <SystemClock_Config>:
+08004598 <SystemClock_Config>:
  * @brief Configures the system clock using HSE oscillator.
  *
  * @details Initializes RCC oscillator settings and sets HSE as the system clock source.
  */
 static void SystemClock_Config(void)
 {
- 8004584:	b580      	push	{r7, lr}
- 8004586:	b094      	sub	sp, #80	@ 0x50
- 8004588:	af00      	add	r7, sp, #0
+ 8004598:	b580      	push	{r7, lr}
+ 800459a:	b094      	sub	sp, #80	@ 0x50
+ 800459c:	af00      	add	r7, sp, #0
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
- 800458a:	f107 0320 	add.w	r3, r7, #32
- 800458e:	2230      	movs	r2, #48	@ 0x30
- 8004590:	2100      	movs	r1, #0
- 8004592:	4618      	mov	r0, r3
- 8004594:	f000 f852 	bl	800463c <memset>
+ 800459e:	f107 0320 	add.w	r3, r7, #32
+ 80045a2:	2230      	movs	r2, #48	@ 0x30
+ 80045a4:	2100      	movs	r1, #0
+ 80045a6:	4618      	mov	r0, r3
+ 80045a8:	f000 f852 	bl	8004650 <memset>
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 8004598:	f107 030c 	add.w	r3, r7, #12
- 800459c:	2200      	movs	r2, #0
- 800459e:	601a      	str	r2, [r3, #0]
- 80045a0:	605a      	str	r2, [r3, #4]
- 80045a2:	609a      	str	r2, [r3, #8]
- 80045a4:	60da      	str	r2, [r3, #12]
- 80045a6:	611a      	str	r2, [r3, #16]
+ 80045ac:	f107 030c 	add.w	r3, r7, #12
+ 80045b0:	2200      	movs	r2, #0
+ 80045b2:	601a      	str	r2, [r3, #0]
+ 80045b4:	605a      	str	r2, [r3, #4]
+ 80045b6:	609a      	str	r2, [r3, #8]
+ 80045b8:	60da      	str	r2, [r3, #12]
+ 80045ba:	611a      	str	r2, [r3, #16]
 
   /** Configure the main internal regulator output voltage
   */
   __HAL_RCC_PWR_CLK_ENABLE();
- 80045a8:	2300      	movs	r3, #0
- 80045aa:	60bb      	str	r3, [r7, #8]
- 80045ac:	4b21      	ldr	r3, [pc, #132]	@ (8004634 <SystemClock_Config+0xb0>)
- 80045ae:	6c1b      	ldr	r3, [r3, #64]	@ 0x40
- 80045b0:	4a20      	ldr	r2, [pc, #128]	@ (8004634 <SystemClock_Config+0xb0>)
- 80045b2:	f043 5380 	orr.w	r3, r3, #268435456	@ 0x10000000
- 80045b6:	6413      	str	r3, [r2, #64]	@ 0x40
- 80045b8:	4b1e      	ldr	r3, [pc, #120]	@ (8004634 <SystemClock_Config+0xb0>)
- 80045ba:	6c1b      	ldr	r3, [r3, #64]	@ 0x40
- 80045bc:	f003 5380 	and.w	r3, r3, #268435456	@ 0x10000000
- 80045c0:	60bb      	str	r3, [r7, #8]
- 80045c2:	68bb      	ldr	r3, [r7, #8]
+ 80045bc:	2300      	movs	r3, #0
+ 80045be:	60bb      	str	r3, [r7, #8]
+ 80045c0:	4b21      	ldr	r3, [pc, #132]	@ (8004648 <SystemClock_Config+0xb0>)
+ 80045c2:	6c1b      	ldr	r3, [r3, #64]	@ 0x40
+ 80045c4:	4a20      	ldr	r2, [pc, #128]	@ (8004648 <SystemClock_Config+0xb0>)
+ 80045c6:	f043 5380 	orr.w	r3, r3, #268435456	@ 0x10000000
+ 80045ca:	6413      	str	r3, [r2, #64]	@ 0x40
+ 80045cc:	4b1e      	ldr	r3, [pc, #120]	@ (8004648 <SystemClock_Config+0xb0>)
+ 80045ce:	6c1b      	ldr	r3, [r3, #64]	@ 0x40
+ 80045d0:	f003 5380 	and.w	r3, r3, #268435456	@ 0x10000000
+ 80045d4:	60bb      	str	r3, [r7, #8]
+ 80045d6:	68bb      	ldr	r3, [r7, #8]
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
- 80045c4:	2300      	movs	r3, #0
- 80045c6:	607b      	str	r3, [r7, #4]
- 80045c8:	4b1b      	ldr	r3, [pc, #108]	@ (8004638 <SystemClock_Config+0xb4>)
- 80045ca:	681b      	ldr	r3, [r3, #0]
- 80045cc:	4a1a      	ldr	r2, [pc, #104]	@ (8004638 <SystemClock_Config+0xb4>)
- 80045ce:	f443 4380 	orr.w	r3, r3, #16384	@ 0x4000
- 80045d2:	6013      	str	r3, [r2, #0]
- 80045d4:	4b18      	ldr	r3, [pc, #96]	@ (8004638 <SystemClock_Config+0xb4>)
- 80045d6:	681b      	ldr	r3, [r3, #0]
- 80045d8:	f403 4380 	and.w	r3, r3, #16384	@ 0x4000
- 80045dc:	607b      	str	r3, [r7, #4]
- 80045de:	687b      	ldr	r3, [r7, #4]
+ 80045d8:	2300      	movs	r3, #0
+ 80045da:	607b      	str	r3, [r7, #4]
+ 80045dc:	4b1b      	ldr	r3, [pc, #108]	@ (800464c <SystemClock_Config+0xb4>)
+ 80045de:	681b      	ldr	r3, [r3, #0]
+ 80045e0:	4a1a      	ldr	r2, [pc, #104]	@ (800464c <SystemClock_Config+0xb4>)
+ 80045e2:	f443 4380 	orr.w	r3, r3, #16384	@ 0x4000
+ 80045e6:	6013      	str	r3, [r2, #0]
+ 80045e8:	4b18      	ldr	r3, [pc, #96]	@ (800464c <SystemClock_Config+0xb4>)
+ 80045ea:	681b      	ldr	r3, [r3, #0]
+ 80045ec:	f403 4380 	and.w	r3, r3, #16384	@ 0x4000
+ 80045f0:	607b      	str	r3, [r7, #4]
+ 80045f2:	687b      	ldr	r3, [r7, #4]
 
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
- 80045e0:	2301      	movs	r3, #1
- 80045e2:	623b      	str	r3, [r7, #32]
+ 80045f4:	2301      	movs	r3, #1
+ 80045f6:	623b      	str	r3, [r7, #32]
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
- 80045e4:	f44f 3380 	mov.w	r3, #65536	@ 0x10000
- 80045e8:	627b      	str	r3, [r7, #36]	@ 0x24
+ 80045f8:	f44f 3380 	mov.w	r3, #65536	@ 0x10000
+ 80045fc:	627b      	str	r3, [r7, #36]	@ 0x24
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
- 80045ea:	2300      	movs	r3, #0
- 80045ec:	63bb      	str	r3, [r7, #56]	@ 0x38
+ 80045fe:	2300      	movs	r3, #0
+ 8004600:	63bb      	str	r3, [r7, #56]	@ 0x38
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
- 80045ee:	f107 0320 	add.w	r3, r7, #32
- 80045f2:	4618      	mov	r0, r3
- 80045f4:	f7fd f98c 	bl	8001910 <HAL_RCC_OscConfig>
- 80045f8:	4603      	mov	r3, r0
- 80045fa:	2b00      	cmp	r3, #0
- 80045fc:	d001      	beq.n	8004602 <SystemClock_Config+0x7e>
+ 8004602:	f107 0320 	add.w	r3, r7, #32
+ 8004606:	4618      	mov	r0, r3
+ 8004608:	f7fd f982 	bl	8001910 <HAL_RCC_OscConfig>
+ 800460c:	4603      	mov	r3, r0
+ 800460e:	2b00      	cmp	r3, #0
+ 8004610:	d001      	beq.n	8004616 <SystemClock_Config+0x7e>
   {
     report_init_error();
- 80045fe:	f7ff fe9b 	bl	8004338 <report_init_error>
+ 8004612:	f7ff fe91 	bl	8004338 <report_init_error>
   }
 
   /** Initializes the CPU, AHB and APB buses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
- 8004602:	230f      	movs	r3, #15
- 8004604:	60fb      	str	r3, [r7, #12]
+ 8004616:	230f      	movs	r3, #15
+ 8004618:	60fb      	str	r3, [r7, #12]
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSE;
- 8004606:	2301      	movs	r3, #1
- 8004608:	613b      	str	r3, [r7, #16]
+ 800461a:	2301      	movs	r3, #1
+ 800461c:	613b      	str	r3, [r7, #16]
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 800460a:	2300      	movs	r3, #0
- 800460c:	617b      	str	r3, [r7, #20]
+ 800461e:	2300      	movs	r3, #0
+ 8004620:	617b      	str	r3, [r7, #20]
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 800460e:	2300      	movs	r3, #0
- 8004610:	61bb      	str	r3, [r7, #24]
+ 8004622:	2300      	movs	r3, #0
+ 8004624:	61bb      	str	r3, [r7, #24]
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 8004612:	2300      	movs	r3, #0
- 8004614:	61fb      	str	r3, [r7, #28]
+ 8004626:	2300      	movs	r3, #0
+ 8004628:	61fb      	str	r3, [r7, #28]
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
- 8004616:	f107 030c 	add.w	r3, r7, #12
- 800461a:	2100      	movs	r1, #0
- 800461c:	4618      	mov	r0, r3
- 800461e:	f7fd fbef 	bl	8001e00 <HAL_RCC_ClockConfig>
- 8004622:	4603      	mov	r3, r0
- 8004624:	2b00      	cmp	r3, #0
- 8004626:	d001      	beq.n	800462c <SystemClock_Config+0xa8>
+ 800462a:	f107 030c 	add.w	r3, r7, #12
+ 800462e:	2100      	movs	r1, #0
+ 8004630:	4618      	mov	r0, r3
+ 8004632:	f7fd fbe5 	bl	8001e00 <HAL_RCC_ClockConfig>
+ 8004636:	4603      	mov	r3, r0
+ 8004638:	2b00      	cmp	r3, #0
+ 800463a:	d001      	beq.n	8004640 <SystemClock_Config+0xa8>
   {
     report_init_error();
- 8004628:	f7ff fe86 	bl	8004338 <report_init_error>
+ 800463c:	f7ff fe7c 	bl	8004338 <report_init_error>
   }
 }
- 800462c:	bf00      	nop
- 800462e:	3750      	adds	r7, #80	@ 0x50
- 8004630:	46bd      	mov	sp, r7
- 8004632:	bd80      	pop	{r7, pc}
- 8004634:	40023800 	.word	0x40023800
- 8004638:	40007000 	.word	0x40007000
+ 8004640:	bf00      	nop
+ 8004642:	3750      	adds	r7, #80	@ 0x50
+ 8004644:	46bd      	mov	sp, r7
+ 8004646:	bd80      	pop	{r7, pc}
+ 8004648:	40023800 	.word	0x40023800
+ 800464c:	40007000 	.word	0x40007000
 
-0800463c <memset>:
- 800463c:	4402      	add	r2, r0
- 800463e:	4603      	mov	r3, r0
- 8004640:	4293      	cmp	r3, r2
- 8004642:	d100      	bne.n	8004646 <memset+0xa>
- 8004644:	4770      	bx	lr
- 8004646:	f803 1b01 	strb.w	r1, [r3], #1
- 800464a:	e7f9      	b.n	8004640 <memset+0x4>
+08004650 <memset>:
+ 8004650:	4402      	add	r2, r0
+ 8004652:	4603      	mov	r3, r0
+ 8004654:	4293      	cmp	r3, r2
+ 8004656:	d100      	bne.n	800465a <memset+0xa>
+ 8004658:	4770      	bx	lr
+ 800465a:	f803 1b01 	strb.w	r1, [r3], #1
+ 800465e:	e7f9      	b.n	8004654 <memset+0x4>
 
-0800464c <__libc_init_array>:
- 800464c:	b570      	push	{r4, r5, r6, lr}
- 800464e:	4d0d      	ldr	r5, [pc, #52]	@ (8004684 <__libc_init_array+0x38>)
- 8004650:	4c0d      	ldr	r4, [pc, #52]	@ (8004688 <__libc_init_array+0x3c>)
- 8004652:	1b64      	subs	r4, r4, r5
- 8004654:	10a4      	asrs	r4, r4, #2
- 8004656:	2600      	movs	r6, #0
- 8004658:	42a6      	cmp	r6, r4
- 800465a:	d109      	bne.n	8004670 <__libc_init_array+0x24>
- 800465c:	4d0b      	ldr	r5, [pc, #44]	@ (800468c <__libc_init_array+0x40>)
- 800465e:	4c0c      	ldr	r4, [pc, #48]	@ (8004690 <__libc_init_array+0x44>)
- 8004660:	f000 f818 	bl	8004694 <_init>
- 8004664:	1b64      	subs	r4, r4, r5
- 8004666:	10a4      	asrs	r4, r4, #2
- 8004668:	2600      	movs	r6, #0
- 800466a:	42a6      	cmp	r6, r4
- 800466c:	d105      	bne.n	800467a <__libc_init_array+0x2e>
- 800466e:	bd70      	pop	{r4, r5, r6, pc}
- 8004670:	f855 3b04 	ldr.w	r3, [r5], #4
- 8004674:	4798      	blx	r3
- 8004676:	3601      	adds	r6, #1
- 8004678:	e7ee      	b.n	8004658 <__libc_init_array+0xc>
- 800467a:	f855 3b04 	ldr.w	r3, [r5], #4
- 800467e:	4798      	blx	r3
- 8004680:	3601      	adds	r6, #1
- 8004682:	e7f2      	b.n	800466a <__libc_init_array+0x1e>
- 8004684:	0800485c 	.word	0x0800485c
- 8004688:	0800485c 	.word	0x0800485c
- 800468c:	0800485c 	.word	0x0800485c
- 8004690:	08004860 	.word	0x08004860
+08004660 <__libc_init_array>:
+ 8004660:	b570      	push	{r4, r5, r6, lr}
+ 8004662:	4d0d      	ldr	r5, [pc, #52]	@ (8004698 <__libc_init_array+0x38>)
+ 8004664:	4c0d      	ldr	r4, [pc, #52]	@ (800469c <__libc_init_array+0x3c>)
+ 8004666:	1b64      	subs	r4, r4, r5
+ 8004668:	10a4      	asrs	r4, r4, #2
+ 800466a:	2600      	movs	r6, #0
+ 800466c:	42a6      	cmp	r6, r4
+ 800466e:	d109      	bne.n	8004684 <__libc_init_array+0x24>
+ 8004670:	4d0b      	ldr	r5, [pc, #44]	@ (80046a0 <__libc_init_array+0x40>)
+ 8004672:	4c0c      	ldr	r4, [pc, #48]	@ (80046a4 <__libc_init_array+0x44>)
+ 8004674:	f000 f818 	bl	80046a8 <_init>
+ 8004678:	1b64      	subs	r4, r4, r5
+ 800467a:	10a4      	asrs	r4, r4, #2
+ 800467c:	2600      	movs	r6, #0
+ 800467e:	42a6      	cmp	r6, r4
+ 8004680:	d105      	bne.n	800468e <__libc_init_array+0x2e>
+ 8004682:	bd70      	pop	{r4, r5, r6, pc}
+ 8004684:	f855 3b04 	ldr.w	r3, [r5], #4
+ 8004688:	4798      	blx	r3
+ 800468a:	3601      	adds	r6, #1
+ 800468c:	e7ee      	b.n	800466c <__libc_init_array+0xc>
+ 800468e:	f855 3b04 	ldr.w	r3, [r5], #4
+ 8004692:	4798      	blx	r3
+ 8004694:	3601      	adds	r6, #1
+ 8004696:	e7f2      	b.n	800467e <__libc_init_array+0x1e>
+ 8004698:	08004870 	.word	0x08004870
+ 800469c:	08004870 	.word	0x08004870
+ 80046a0:	08004870 	.word	0x08004870
+ 80046a4:	08004874 	.word	0x08004874
 
-08004694 <_init>:
- 8004694:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 8004696:	bf00      	nop
- 8004698:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 800469a:	bc08      	pop	{r3}
- 800469c:	469e      	mov	lr, r3
- 800469e:	4770      	bx	lr
+080046a8 <_init>:
+ 80046a8:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 80046aa:	bf00      	nop
+ 80046ac:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 80046ae:	bc08      	pop	{r3}
+ 80046b0:	469e      	mov	lr, r3
+ 80046b2:	4770      	bx	lr
 
-080046a0 <_fini>:
- 80046a0:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 80046a2:	bf00      	nop
- 80046a4:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 80046a6:	bc08      	pop	{r3}
- 80046a8:	469e      	mov	lr, r3
- 80046aa:	4770      	bx	lr
+080046b4 <_fini>:
+ 80046b4:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 80046b6:	bf00      	nop
+ 80046b8:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 80046ba:	bc08      	pop	{r3}
+ 80046bc:	469e      	mov	lr, r3
+ 80046be:	4770      	bx	lr
