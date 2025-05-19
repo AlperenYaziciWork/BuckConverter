@@ -18,6 +18,7 @@ typedef struct
 	uint8_t period_time_process_of_controller_ms;
 	float v_out_ref;
 	float i_out_max;
+	uint16_t over_current_occurence_time_min; // over current value should be detected at least this
 
 }buck_converter_cfg_t;
 

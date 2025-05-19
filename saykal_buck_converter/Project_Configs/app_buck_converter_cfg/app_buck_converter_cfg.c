@@ -15,7 +15,7 @@ static pid_controller_t m_pid_voltage_controller =
 	.Kd = 0.1,
 	.Kaw = 0.02,
 	.TimeStep = 20,
-	.controller_output_max = 9.98f, // voltage controller output uses as output current reference
+	.controller_output_max = 9.96f, // voltage controller output uses as output current reference
 	.controller_output_min = 0.0f, // voltage controller output uses as output current reference
 };
 
@@ -32,7 +32,8 @@ static pid_controller_t m_pid_current_controller =
 
 const buck_converter_cfg_t g_buck_converter_config =
 {
-	.i_out_max = 9.98f,
+	.over_current_occurence_time_min = 3,
+	.i_out_max = 10.00f,
 	.v_out_ref = 24.0f,
 	.period_time_process_of_controller_ms = 20,
 	.pid_out_voltage_cotroller_ptr = &m_pid_voltage_controller,
