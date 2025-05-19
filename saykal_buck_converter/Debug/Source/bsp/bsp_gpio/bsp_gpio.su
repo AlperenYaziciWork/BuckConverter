@@ -1,5 +1,5 @@
-../Source/bsp/bsp_gpio/bsp_gpio.c:31:6:init_bsp_gpio	16	static
-../Source/bsp/bsp_gpio/bsp_gpio.c:46:6:init_gpio_pin	40	static
-../Source/bsp/bsp_gpio/bsp_gpio.c:71:6:write_gpio_pin	16	static
-../Source/bsp/bsp_gpio/bsp_gpio.c:100:9:read_gpio_pin	16	static
-../Source/bsp/bsp_gpio/bsp_gpio.c:119:13:enable_used_gpio_pin_clock	32	static
+../Source/bsp/bsp_gpio/bsp_gpio.c:31:6:init_bsp_gpio	32	static
+../Source/bsp/bsp_gpio/bsp_gpio.c:49:6:init_gpio_pin	40	static
+../Source/bsp/bsp_gpio/bsp_gpio.c:81:6:write_gpio_pin	16	static
+../Source/bsp/bsp_gpio/bsp_gpio.c:110:9:read_gpio_pin	16	static
+../Source/bsp/bsp_gpio/bsp_gpio.c:129:13:enable_used_gpio_pin_clock	32	static

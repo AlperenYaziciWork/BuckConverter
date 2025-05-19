@@ -1,7 +1,7 @@
 ../Source/bsp/bsp_adc/bsp_adc.c:42:6:init_bsp_adc	2
-../Source/bsp/bsp_adc/bsp_adc.c:75:18:read_current_sense_adc_value	2
-../Source/bsp/bsp_adc/bsp_adc.c:101:18:read_voltage_sense_adc_value	2
-../Source/bsp/bsp_adc/bsp_adc.c:127:18:read_temperature_sense_adc_value	2
-../Source/bsp/bsp_adc/bsp_adc.c:150:13:configure_current_sense_adc_channel	2
-../Source/bsp/bsp_adc/bsp_adc.c:168:13:configure_voltage_sense_adc_channel	2
-../Source/bsp/bsp_adc/bsp_adc.c:186:13:configure_temperature_sense_adc_channel	2
+../Source/bsp/bsp_adc/bsp_adc.c:72:18:read_current_sense_adc_value	2
+../Source/bsp/bsp_adc/bsp_adc.c:98:18:read_voltage_sense_adc_value	2
+../Source/bsp/bsp_adc/bsp_adc.c:124:18:read_temperature_sense_adc_value	2
+../Source/bsp/bsp_adc/bsp_adc.c:147:13:configure_current_sense_adc_channel	2
+../Source/bsp/bsp_adc/bsp_adc.c:165:13:configure_voltage_sense_adc_channel	2
+../Source/bsp/bsp_adc/bsp_adc.c:183:13:configure_temperature_sense_adc_channel	2

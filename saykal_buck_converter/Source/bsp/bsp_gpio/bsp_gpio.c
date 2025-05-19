@@ -30,6 +30,9 @@ static void enable_used_gpio_pin_clock(GPIO_TypeDef* gpio_port);
  */
 void init_bsp_gpio(const gpio_pin_cfg_t *gpio_pin_configs_ptr)
 {
+	__HAL_RCC_GPIOB_CLK_ENABLE();
+	__HAL_RCC_GPIOA_CLK_ENABLE();
+	__HAL_RCC_GPIOH_CLK_ENABLE();
     if(NULL != gpio_pin_configs_ptr)
     {
         m_last_gpio_pin_config_ptr = (gpio_pin_cfg_t *)gpio_pin_configs_ptr;
@@ -56,7 +59,14 @@ void init_gpio_pin(uint8_t pin_no)
   GPIO_InitTypeDef GPIO_InitStruct = {0};
   GPIO_InitStruct.Pin = m_last_gpio_pin_config_ptr[pin_no].Pin;
   GPIO_InitStruct.Mode = m_last_gpio_pin_config_ptr[pin_no].Mode; 
-  GPIO_InitStruct.Pull = m_last_gpio_pin_config_ptr[pin_no].Pull;  
+  GPIO_InitStruct.Pull = m_last_gpio_pin_config_ptr[pin_no].Pull;
+
+  if(NULL != m_last_gpio_pin_config_ptr[pin_no].Alternate_ptr)
+  {
+	  GPIO_InitStruct.Alternate =
+		 *m_last_gpio_pin_config_ptr[pin_no].Alternate_ptr;
+  }
+
   HAL_GPIO_Init(m_last_gpio_pin_config_ptr[pin_no].Port, &GPIO_InitStruct);
 }
 
