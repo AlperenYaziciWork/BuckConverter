@@ -1,0 +1,5 @@
+../Source/system/error_manager/error_manager.c:25:6:report_sensor_error	8	static
+../Source/system/error_manager/error_manager.c:38:6:report_development_error	8	static
+../Source/system/error_manager/error_manager.c:50:6:report_over_current	8	static
+../Source/system/error_manager/error_manager.c:63:6:report_init_error	8	static
+../Source/system/error_manager/error_manager.c:75:9:get_system_error_status	4	static
