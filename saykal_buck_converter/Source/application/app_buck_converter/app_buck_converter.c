@@ -116,7 +116,7 @@ void control_out_voltage_with_current_limit(software_timer_id_t sw_timer_id)
 		return;
 	}
 
-	send_signal_over_com(COM_BUCK_OUTPUT_VOLTAGE_SIGNAL_ID,sensed_output_voltage); 
+	send_signal_over_com(COM_BUCK_OUTPUT_VOLTAGE_SIGNAL_ID,&sensed_output_voltage);
 
 	float i_out_reference = PID_Step(m_buck_converter_cfg->pid_out_voltage_cotroller_ptr,
 									 sensed_output_voltage,
@@ -133,7 +133,7 @@ void control_out_voltage_with_current_limit(software_timer_id_t sw_timer_id)
 		return;
 	}
 
-	send_signal_over_com(COM_BUCK_OUTPUT_CURRENT_SIGNAL_ID,sensed_output_current);
+	send_signal_over_com(COM_BUCK_OUTPUT_CURRENT_SIGNAL_ID,&sensed_output_current);
 	//TODO : current monitor to detect over current
 	bool is_over_current =
 		monitor_current_to_detect_over_current(sensed_output_current ,
