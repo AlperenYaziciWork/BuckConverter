@@ -1,8 +1,24 @@
-/*
- * app_buck_converter.c
+/**
+ * @file app_buck_converter.c
+ * @brief Buck Converter Application Layer
  *
- *  Created on: May 18, 2025
- *      Author: alperenyazici
+ * This module implements the application logic for controlling a buck converter
+ * using a cascaded PID control approach with integrated overcurrent protection.
+ *
+ * The system reads output voltage and current via ADC sensors and applies:
+ * - An outer PID controller to regulate the output voltage.
+ * - An inner PID controller to limit output current based on the voltage controller’s output.
+ *
+ * The resulting control signal is used to set the PWM duty cycle for the buck converter's MOSFET.
+ *
+ * Key features:
+ * - Cascaded voltage and current control loop
+ * - Periodic control execution via software timer
+ * - Overcurrent detection with configurable persistence threshold
+ * - Robust error handling and protection against sensor or control failures
+ *
+ * @author Alperen Yazıcı
+ * @date May 18, 2025
  */
 
 #include "app_buck_converter.h"
