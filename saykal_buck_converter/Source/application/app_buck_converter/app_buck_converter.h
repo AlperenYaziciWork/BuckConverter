@@ -10,7 +10,7 @@
 
 #include "stdint.h"
 #include "pid_controller.h"
-
+#include "software_timer.h"
 /**
  * @brief Configuration structure for the buck converter control system.
  *
@@ -96,6 +96,6 @@ void init_buck_converter(const buck_converter_cfg_t *buck_converter_cfg_ptr);
  *
  * @retval None
  */
-void control_out_voltage_with_current_limit(void);
+void control_out_voltage_with_current_limit(software_timer_id_t sw_timer_id);
 
 #endif /* APP_BUCK_CONVERTER_H_ */

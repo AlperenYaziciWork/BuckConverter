@@ -22,9 +22,9 @@
  */
 
 #include "app_buck_converter.h"
-#include "software_timer.h"
 #include "adc_sensor_driver.h"
 #include "bsp_pwm.h"
+#include "com_driver.h"
 #include "stdbool.h"
 /**
  * @brief Pointer to the active buck converter configuration.
@@ -95,8 +95,10 @@ void init_buck_converter(const buck_converter_cfg_t *buck_converter_cfg_ptr)
  *
  * @retval None
  */
-void control_out_voltage_with_current_limit(void)
+void control_out_voltage_with_current_limit(software_timer_id_t sw_timer_id)
 {
+	(void)sw_timer_id;
+
 	if(true == is_cricial_error_detected)
 	{
 		return; // This is exist for double prevention,
@@ -114,7 +116,7 @@ void control_out_voltage_with_current_limit(void)
 		return;
 	}
 
-	send_signal_over_canbus(sensed_output_voltage); //TODO:
+	send_signal_over_com(COM_BUCK_OUTPUT_VOLTAGE_SIGNAL_ID,sensed_output_voltage); 
 
 	float i_out_reference = PID_Step(m_buck_converter_cfg->pid_out_voltage_cotroller_ptr,
 									 sensed_output_voltage,
@@ -131,7 +133,7 @@ void control_out_voltage_with_current_limit(void)
 		return;
 	}
 
-	send_signal_over_canbus(sensed_output_current);//TODO:
+	send_signal_over_com(COM_BUCK_OUTPUT_CURRENT_SIGNAL_ID,sensed_output_current);
 	//TODO : current monitor to detect over current
 	bool is_over_current =
 		monitor_current_to_detect_over_current(sensed_output_current ,
