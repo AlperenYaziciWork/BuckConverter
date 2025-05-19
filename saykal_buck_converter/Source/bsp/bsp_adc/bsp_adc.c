@@ -41,9 +41,6 @@ static void configure_temperature_sense_adc_channel();
  */
 void init_bsp_adc()
 {
-
-    const uint32_t number_of_conversion = 3U;
-
     /** Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion)
      */
     m_hadc1.Instance = ADC1;
