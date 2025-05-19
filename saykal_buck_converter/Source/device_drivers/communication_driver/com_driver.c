@@ -17,7 +17,7 @@
 
 #include "com_driver.h"
 #include "stddef.h"
-
+#include "bsp_can.h"
 /**
  * @def COM_MESSAGE_DATA_LEN_MAX
  * @brief Maximum length (in bytes) of any message buffer.
