@@ -1,0 +1,4 @@
+../Source/system/system_manager/system_manager.c:121:6:run_state_machine_of_system_manager	6
+../Source/system/system_manager/system_manager.c:207:6:calculate_system_temperature	1
+../Source/system/system_manager/system_manager.c:230:17:scale_temperature_for_send_over_com	3
+../Source/system/system_manager/system_manager.c:254:13:SystemClock_Config	3
