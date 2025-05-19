@@ -91,6 +91,17 @@ const com_signal_t m_com_signals_of_system_info_message[] =
 		},
 
 	},
+	{
+		.signal_id = COM_SYSTEM_ERROR_STATE_SIGNAL_ID,
+		.signal_base_info =
+		{
+			.com_bit_position = 18U,
+			.com_bit_size = 14U,
+			.com_signal_endianness = COM_SIGNAL_ENDIANNESS_LITTLE_ENDIAN,
+			.com_signal_variable_type = COM_SIGNAL_VARIABLE_UINT8,
+		},
+
+	},
 };
 
 const com_message_t m_com_messages[] =
@@ -116,7 +127,7 @@ const com_message_t m_com_messages[] =
 	{
 		.message_id = COM_BUCK_SYSTEM_INFO_MESSAGE_ID,
 		.message_data_length = 8U,
-		.total_signal_cnt_in_message = 2U,
+		.total_signal_cnt_in_message = 3U,
 		.transmission_bus_of_message = MESSAGE_BUS_CANBUS,
 		.periodic_send_info = &m_com_periodic_voltage_current_system_info_message,//All messages connected the same time base
 		.signals_ptr = m_com_signals_of_system_info_message,

@@ -17,6 +17,8 @@
 
 #include "com_driver.h"
 #include "stddef.h"
+#include "bsp_can.h"
+#include "error_manager.h"
 
 /**
  * @def COM_MESSAGE_DATA_LEN_MAX

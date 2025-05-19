@@ -7,7 +7,7 @@
 
 
 
-#include "adc_sensor_driver.h"
+#include <device_drivers/adc_sensor_driver/adc_sensor_driver.h>
 #include "adc_sensor_driver_cfg.h"
 #include "bsp_adc.h"
 

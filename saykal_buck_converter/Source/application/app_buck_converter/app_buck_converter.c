@@ -21,11 +21,12 @@
  * @date May 18, 2025
  */
 
+#include <device_drivers/adc_sensor_driver/adc_sensor_driver.h>
 #include "app_buck_converter.h"
-#include "adc_sensor_driver.h"
 #include "bsp_pwm.h"
 #include "com_driver.h"
 #include "stdbool.h"
+#include "error_manager.h"
 /**
  * @brief Pointer to the active buck converter configuration.
  */

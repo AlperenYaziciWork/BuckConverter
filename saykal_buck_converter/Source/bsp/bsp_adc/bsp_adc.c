@@ -1,5 +1,6 @@
 
 #include "bsp_adc.h"
+#include "error_manager.h"
 
 #define RAW_TO_VOLTAGE_FACTOR	3.3f/4095
 
@@ -57,7 +58,7 @@ void init_bsp_adc()
     m_hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
     if (HAL_ADC_Init(&m_hadc1) != HAL_OK)
     {
-    Error_Handler();
+    	report_init_error();
     }
 
 }
@@ -154,7 +155,7 @@ static void configure_current_sense_adc_channel()
     sConfig.SamplingTime = ADC_SAMPLETIME_15CYCLES;
     if (HAL_ADC_ConfigChannel(&m_hadc1, &sConfig) != HAL_OK)
     {
-        Error_Handler();
+        report_init_error();
     }
 }
 
@@ -172,7 +173,7 @@ static void configure_voltage_sense_adc_channel()
     sConfig.SamplingTime = ADC_SAMPLETIME_56CYCLES;
     if (HAL_ADC_ConfigChannel(&m_hadc1, &sConfig) != HAL_OK)
     {
-        Error_Handler();
+        report_init_error();
     }
 }
 
@@ -190,7 +191,7 @@ static void configure_temperature_sense_adc_channel()
     sConfig.SamplingTime = ADC_SAMPLETIME_112CYCLES;
     if (HAL_ADC_ConfigChannel(&m_hadc1, &sConfig) != HAL_OK)
     {
-        Error_Handler();
+        report_init_error();
     }
 }
 

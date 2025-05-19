@@ -2,6 +2,9 @@
 
 #include "adc_sensor_driver.h"
 
+#include "error_manager.h"
+
+
 /**
  * @brief Pointer to the configuration array holding all ADC sensors parameters.
  */

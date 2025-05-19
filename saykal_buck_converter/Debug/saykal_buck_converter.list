@@ -407,7 +407,7 @@ int main(void)
  8000508:	f000 f8e8 	bl	80006dc <MX_TIM1_Init>
   MX_ADC1_Init();
  800050c:	f000 f85e 	bl	80005cc <MX_ADC1_Init>
-//  HAL_CAN_AddTxMessage(NULL,NULL,NULL,NULL);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
