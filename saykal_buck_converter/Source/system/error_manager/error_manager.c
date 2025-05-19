@@ -68,8 +68,23 @@ void report_init_error(void)
 }
 
 /**
- * @brief Returns the current system error status.
+ * @brief Returns whether an overcurrent system error is currently active.
  * 
+ * @return uint8_t 1 if the overcurrent error bit is set, 0 otherwise.
+ */
+bool get_system_overcurrent_error_status(void)
+{
+	bool is_overcurrent_exist = false;
+	if(1U == ((m_system_errors >> ERROR_TYPE_OVERCURRENT) & 0x01U))
+	{
+		is_overcurrent_exist = true;
+	}
+    return is_overcurrent_exist;
+}
+
+/**
+ * @brief Returns the current system error status.
+ *
  * @return uint8_t A bitfield representing all system errors currently flagged.
  */
 uint8_t get_system_error_status(void)

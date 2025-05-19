@@ -10,6 +10,7 @@
 
 #include <stdint.h>
 #include "stm32f4xx_hal.h"
+#include "bsp_gpio_cfg.h"
 
 typedef enum
 {

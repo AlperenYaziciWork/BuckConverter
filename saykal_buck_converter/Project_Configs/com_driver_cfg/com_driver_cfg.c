@@ -9,13 +9,13 @@
 #include "com_driver.h"
 #include "software_timer_cfg.h"
 
-const com_periodic_send_info_t m_com_periodic_voltage_current_system_info_message =
+static const com_periodic_send_info_t m_com_periodic_voltage_current_system_info_message =
 {
 	.send_period_ms = 100u,
-	.sw_timer_id = COM_VOLTAGE_CURRENT_SYSTEM_INFO_MESSAGE_TIMER,
+	.sw_timer_id = COM_VOLTAGE_CURRENT_SYSTEM_INFO_MESSAGE_TIMER_ID,
 };
 
-const com_signal_t m_com_signals_of_voltage_info_message[] =
+static const com_signal_t m_com_signals_of_voltage_info_message[] =
 {
 	{
 		.signal_id = COM_BUCK_OUTPUT_VOLTAGE_SIGNAL_ID,
@@ -41,7 +41,7 @@ const com_signal_t m_com_signals_of_voltage_info_message[] =
 	},
 };
 
-const com_signal_t m_com_signals_of_current_info_message[] =
+static const com_signal_t m_com_signals_of_current_info_message[] =
 {
 	{
 		.signal_id = COM_BUCK_OUTPUT_CURRENT_SIGNAL_ID,
@@ -67,7 +67,7 @@ const com_signal_t m_com_signals_of_current_info_message[] =
 	},
 };
 
-const com_signal_t m_com_signals_of_system_info_message[] =
+static const com_signal_t m_com_signals_of_system_info_message[] =
 {
 	{
 		.signal_id = COM_SYSTEM_TEMPERATURE_SIGNAL_ID,
@@ -104,7 +104,7 @@ const com_signal_t m_com_signals_of_system_info_message[] =
 	},
 };
 
-const com_message_t m_com_messages[] =
+static const com_message_t m_com_messages[] =
 {
 	{
 		.message_id = COM_BUCK_VOLTAGE_INFO_MESSAGE_ID,
@@ -125,7 +125,7 @@ const com_message_t m_com_messages[] =
 
 	},
 	{
-		.message_id = COM_BUCK_SYSTEM_INFO_MESSAGE_ID,
+		.message_id = COM_SYSTEM_INFO_MESSAGE_ID,
 		.message_data_length = 8U,
 		.total_signal_cnt_in_message = 3U,
 		.transmission_bus_of_message = MESSAGE_BUS_CANBUS,

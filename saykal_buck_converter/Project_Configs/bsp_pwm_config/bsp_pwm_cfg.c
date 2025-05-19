@@ -2,7 +2,7 @@
 #include "stm32f4xx_hal_tim.h"
 #include "bsp_gpio_cfg.h"
 
-const bsp_pwm_channel_t m_bsp_pwm_channel_info = 
+static const bsp_pwm_channel_t m_bsp_pwm_channel_info =
 {
 	.pwm_channel_id = PWM_TIMER_ID_FOR_BUCK_MOSFET, // it is used from UPPER LAYER to abstract all pwm hardware things.
 	.timer_channel = TIM_CHANNEL_1

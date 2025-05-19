@@ -9,7 +9,7 @@
 #include "bsp_gpio_cfg.h"
 #include "com_driver_cfg.h"
 
-const can_tx_message_cfg_t m_can_tx_messages_config[] =
+static const can_tx_message_cfg_t m_can_tx_messages_config[] =
 {
 		{
 			.can_id = 0x123,
@@ -24,7 +24,7 @@ const can_tx_message_cfg_t m_can_tx_messages_config[] =
 		{
 			.can_id = 0x789,
 			.id_type = CANID_EXTENDED,
-			.message_id = COM_BUCK_SYSTEM_INFO_MESSAGE_ID,
+			.message_id = COM_SYSTEM_INFO_MESSAGE_ID,
 		},
 };
 
