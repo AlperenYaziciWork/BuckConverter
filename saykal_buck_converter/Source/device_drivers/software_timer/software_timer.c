@@ -70,7 +70,7 @@ timer_state_e check_status_of_software_timer(software_timer_id_t sw_timer_id)
 static void timer_timeout_process(software_timer_id_t sw_timer_id)
 {
 	timer_timeout_cb_func_t timer_callback_func =
-			m_software_timer_general_config_ptr->parameters_ptr[sw_timer_id].
+			m_software_timer_general_config_ptr->software_timer_cfg_ptr[sw_timer_id].
 			timeout_callback_func;
 
 	if(NULL != timer_callback_func)
@@ -79,7 +79,7 @@ static void timer_timeout_process(software_timer_id_t sw_timer_id)
 	}
 
 	timer_reload_option_e timer_reload_option =
-			m_software_timer_general_config_ptr->parameters_ptr[sw_timer_id].
+			m_software_timer_general_config_ptr->software_timer_cfg_ptr[sw_timer_id].
 			reload_option;
 
 	if(TIMER_RELOAD_AUTO == timer_reload_option)

@@ -9,8 +9,17 @@
 #define ADC_SENSOR_DRIVER_CS_H_
 
 #include "bsp_adc.h"
+#include "adc_sensor_driver_cfg.h"
 
 typedef bsp_adc_status_e (*read_sensor_adc_raw_value_function_t)(float *raw_value_ptr);
+
+typedef enum
+{
+	ADC_SENSOR_ERROR,
+	ADC_SENSOR_OK
+
+}adc_sensor_state_e;
+
 
 typedef struct{
 	read_sensor_adc_raw_value_function_t read_adc_sensor_raw_voltage_func;
@@ -53,7 +62,7 @@ void init_adc_sensor_driver(const adc_sensor_driver_config_t *adc_sensors_config
  * 
  * @retval None
  */
-void read_adc_sensor_value(uint8_t sensor_id , float *sensor_value_ptr);
+adc_sensor_state_e read_adc_sensor_value(uint8_t sensor_id , float *sensor_value_ptr);
 
 
 #endif /* ADC_SENSOR_DRIVER_CS_H_ */

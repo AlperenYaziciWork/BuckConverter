@@ -42,7 +42,7 @@ typedef struct{
 
 typedef struct{
 
-	software_timer_cfg_t *parameters_ptr;
+	const software_timer_cfg_t *software_timer_cfg_ptr;
 	get_timer_tick_ms_func_t get_timer_tick_ms_func;
 
 }software_timer_general_cfg_t;
