@@ -3,3 +3,4 @@ Additionally, documentation has been added for key components such as the Buck C
 Other components have been designed using the configuration-based approach described in these documents. 
 The only exception is the bsp_adc module, which intentionally does not follow this approach to highlight the differences between the two design methodologies. 
 Due to time constraints, detailed documentation could not be provided for all components.
+![image](https://github.com/user-attachments/assets/15e78945-114d-4aed-a278-0c091d6cbbb3)
